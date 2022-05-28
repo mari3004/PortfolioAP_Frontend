@@ -1,0 +1,25 @@
+.container-fluid{
+    border: 5px solid #99A3A4;
+    margin: 0px;
+    padding: 35px;
+    weight:100%;
+    background-image: url(../../../assets/images/fondo1.jpg);
+
+    
+}
+.perfil{
+    width: 350px;
+    height:350px;
+    border-radius:170px;
+    border:10px solid #99A3A4;
+}
+h2{
+    font-size: 50px;
+    font-style: bold;
+    color: white;
+    padding: 10px;
+}
+h4{
+    color: white;
+    padding: 10px;
+}

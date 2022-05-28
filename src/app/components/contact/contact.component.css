@@ -1,0 +1,33 @@
+*{
+    background: #2D066B;
+}
+.container{
+    background: #2D066B;
+
+}
+input:hover{
+    background-color: #99A3A4;
+    color: black;
+}
+.header{
+    color: #99A3A4;
+    font-style: bold;
+}
+textarea:hover{
+    background-color: #99A3A4;
+    color: black;
+}
+button{
+    background-color: #99A3A4
+}
+button:hover{
+    text-decoration: underline;
+    color: blueviolet;
+    background-color: #5D2B68;
+}
+legend{
+    text-decoration: underline;
+    padding: 10px;
+    font-size:35px;
+
+}

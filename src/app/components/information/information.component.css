@@ -1,0 +1,16 @@
+*{
+    background-color: #2D066B;
+    color: #99A3A4;
+}
+#info {
+    border: 5px solid #99A3A4;
+    padding: 2px 2px;
+}
+h1 {
+    text-align: center;
+    text-decoration: underline;
+    padding: 10px;
+}
+h3,h4,h5{
+    padding: 10px;
+}

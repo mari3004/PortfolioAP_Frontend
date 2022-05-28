@@ -1,0 +1,19 @@
+*{
+    background-color: #2D066B;
+    color: #99A3A4;
+}
+.aboutme{
+    border: 5px solid;
+    border-color: #99A3A4;
+
+}
+h2{
+    text-align: center;
+    padding: 2px;
+    text-decoration: underline;
+
+}
+p{
+    padding: 2px 2px;
+    text-align: center;
+}
