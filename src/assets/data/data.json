@@ -1,0 +1,67 @@
+{
+   "name": "Maribel Aizpitarte",
+   "profileimg": "../../assets/images/me.jpg",
+   "experience": [{
+       "employer": "AVALITH",
+       "rol": "HR ASSISTANT",
+       "date": "Julio. 2020 - Actualidad",
+       "task1": "Gestión de ingreso de colaboradores",
+       "task2": "Gestión de novedades para liquidación",
+       "task3": "Gestión y coordinación de beneficios y regalos en Argentina y Ecuador",
+       "task4": "Relevamiento y armado de Procesos Internos"
+   },
+    {
+        "employer": "GRUPO FAVA",
+        "rol": "ADMINISTRATIVA DE RRHH",
+        "date": "Junio. 2018 - Julio 2020",
+        "task1": "Gestión de ingreso de personal",
+        "task2": " Liquidación de comisiones de vendedores",  
+        "task3": "Liquidación de sueldos (CCT 130/75) e impresión de recibos",
+        "task4": "Confección del F.931 a través de aplicativo de Libro de Sueldos Digital",
+        "task5": "Generación de asientos contables",
+        "task6": "Liquidaciones finales y confección de certificados legales.",
+        "task7": "Uso de Tango Astor"
+    },
+    {
+        "employer": "ALVAREZ ARGÜELLES HOTELES",
+        "rol": "ADMINISTRATIVA DE RRHH",
+        "date": "Julio 2016 - Junio 2018",
+        "task1": "Confección de legajos",
+        "task2": "Control de ausentismo",
+        "task3": "Gestión de novedades",
+        "task4": "Liquidación de quincenas y mensuales",
+        "task5": "Denuncia a ART",
+        "task6": "Cargas sociales",
+        "task7": "Confección de libro sueldos",
+        "task8": "Uso de Payroll"
+    },
+    {
+        "employer": "TOYOMAR",
+        "rol": "ADMINISTRATIVA",
+        "date": "Febrero 2015 - Abril 2016",
+        "task1": "Atención a proveedores",
+        "task2": "Conciliación de cuentas",
+        "task3": "Atención telefónica",
+        "task4": "Gestión de pagos y cobranzas",
+        "task5": "Data Entry",
+        "task6": "ABM"        
+    }
+],
+    "education":[{
+        "title": "LICENCIADA EN ADMINISTRACIÓN",
+        "school": "UNIVERSIDAD NACIONAL DE MAR DEL PLATA",
+        "edudate":"Finalizado Julio 2018"
+    },
+    {
+        "title": "Bachiller en Economía y Gestión de las Organizaciones",
+        "school": "Instituto Presbítero Mauro Golé - Maipú",
+        "edudate":"Finalizado 2009 - Promedio General de 9,13/10."
+    },
+    {
+        "title": "Curso de Desarrollo Web Full Stack (HTML,CSS, Javascript, Java)",
+        "school": "Argentina Programa",
+        "edudate": "Finalizado Mayo 2022"
+
+    }
+]
+}

@@ -11,6 +11,17 @@ h1 {
     text-decoration: underline;
     padding: 10px;
 }
-h3,h4,h5{
+h3,h5{
     padding: 10px;
+    display: inline-block;
+}
+h4{
+    padding-left: 6px;
+    
+}
+#logoemp{
+    width: 45px;
+    height: 45px;
+    display: inline-block;
+    padding-right:3px;
 }

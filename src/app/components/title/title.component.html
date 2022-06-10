@@ -2,13 +2,13 @@
     <div class="row">
         <div class="foto text-center col-sm-12 col-md-6 col-lg-6">
             <img class="perfil" 
-            src="../../assets/images/me.jpg"
+            [src]="miPortfolio.profileimg"
             alt="perfil">
         </div>
 
         <div class="texto text-center col-sm-12 col-md-6 col-lg-6">
             <div id="name" class="align right">
-                <h1>{{persona.nombre}} {{persona.apellido}}<br></h1>
+                <h1>{{miPortfolio.name}}<br></h1>
                 <h2>Bienvenidos a mi portfolio<br></h2>
                 <h4>El mismo fue realizado a traves del curso de Argentina Programa del Ministerio de Desarrollo Productivo, 
                     la Cámara Argentina de la Industria de Software (CESSI) y el Instituto Nacional de Tecnología Industrial (INTI).

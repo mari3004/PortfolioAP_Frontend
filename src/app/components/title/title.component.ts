@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { persona } from '../model/persona.model';
-import { PersonaService } from '../services/persona.service';
+import { PortfolioService } from '../services/portfolio.service';
 
 @Component({
   selector: 'app-title',
@@ -8,11 +7,14 @@ import { PersonaService } from '../services/persona.service';
   styleUrls: ['./title.component.css']
 })
 export class TitleComponent implements OnInit {
-  persona: persona = new persona ("","","");
-  constructor(public personaService: PersonaService) { }
+  miPortfolio:any;
+
+  constructor(private datosPortfolio:PortfolioService) { }
 
   ngOnInit(): void {
-    this.personaService.getPersona().subscribe(data => {this.persona = data})
+    this.datosPortfolio.obtenerDatos().subscribe(data => {
+      console.log(data);
+      this.miPortfolio=data
+    })
   }
-
 }
