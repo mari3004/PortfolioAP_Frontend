@@ -1,11 +1,13 @@
 *{
     background-color: #2D066B;
     color: #99A3A4;
+    margin: 0px;
 }
 section {
     width: 100%;
     border: 5px solid #99A3A4;
     padding: 5px 5px 5px 5px;
+    border-color: #99A3A4;
 }
 
 h1 {

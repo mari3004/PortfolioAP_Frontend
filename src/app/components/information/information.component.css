@@ -1,10 +1,14 @@
 *{
     background-color: #2D066B;
     color: #99A3A4;
+    margin: 0px;
+    
 }
-#info {
-    border: 5px solid #99A3A4;
+.info {
+    border: 5px solid;
+    border-color: #99A3A4;
     padding: 2px 2px;
+    margin: 0;
 }
 h1 {
     text-align: center;
@@ -17,6 +21,7 @@ h3,h5{
 }
 h4{
     padding-left: 6px;
+    padding-bottom: 1em;
     
 }
 #logoemp{
@@ -24,4 +29,8 @@ h4{
     height: 45px;
     display: inline-block;
     padding-right:3px;
+    border-radius:30px;
+}
+ul{
+    padding-bottom: 15px;
 }

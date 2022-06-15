@@ -1,11 +1,13 @@
 *{
     background-color: #2D066B;
     color: #99A3A4;
+    margin: 0px;
+    padding: 0px;
 }
 .aboutme{
     border: 5px solid;
     border-color: #99A3A4;
-
+    padding: 2em;
 }
 h2{
     text-align: center;
