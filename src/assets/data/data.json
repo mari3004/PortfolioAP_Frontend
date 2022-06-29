@@ -1,67 +1,72 @@
 {
-   "name": "Maribel Aizpitarte",
-   "profileimg": "../../assets/images/me.jpg",
-   "experience": [{
-       "employer": "AVALITH",
-       "rol": "HR ASSISTANT",
-       "date": "Julio. 2020 - Actualidad",
-       "task1": "Gestión de ingreso de colaboradores",
-       "task2": "Gestión de novedades para liquidación",
-       "task3": "Gestión y coordinación de beneficios y regalos en Argentina y Ecuador",
-       "task4": "Relevamiento y armado de Procesos Internos"
-   },
-    {
-        "employer": "GRUPO FAVA",
-        "rol": "ADMINISTRATIVA DE RRHH",
-        "date": "Junio. 2018 - Julio 2020",
-        "task1": "Gestión de ingreso de personal",
-        "task2": " Liquidación de comisiones de vendedores",  
-        "task3": "Liquidación de sueldos (CCT 130/75) e impresión de recibos",
-        "task4": "Confección del F.931 a través de aplicativo de Libro de Sueldos Digital",
-        "task5": "Generación de asientos contables",
-        "task6": "Liquidaciones finales y confección de certificados legales.",
-        "task7": "Uso de Tango Astor"
-    },
-    {
-        "employer": "ALVAREZ ARGÜELLES HOTELES",
-        "rol": "ADMINISTRATIVA DE RRHH",
-        "date": "Julio 2016 - Junio 2018",
-        "task1": "Confección de legajos",
-        "task2": "Control de ausentismo",
-        "task3": "Gestión de novedades",
-        "task4": "Liquidación de quincenas y mensuales",
-        "task5": "Denuncia a ART",
-        "task6": "Cargas sociales",
-        "task7": "Confección de libro sueldos",
-        "task8": "Uso de Payroll"
-    },
-    {
-        "employer": "TOYOMAR",
-        "rol": "ADMINISTRATIVA",
-        "date": "Febrero 2015 - Abril 2016",
-        "task1": "Atención a proveedores",
-        "task2": "Conciliación de cuentas",
-        "task3": "Atención telefónica",
-        "task4": "Gestión de pagos y cobranzas",
-        "task5": "Data Entry",
-        "task6": "ABM"        
-    }
-],
-    "education":[{
-        "title": "LICENCIADA EN ADMINISTRACIÓN",
-        "school": "UNIVERSIDAD NACIONAL DE MAR DEL PLATA",
-        "edudate":"Finalizado Julio 2018"
-    },
-    {
-        "title": "Bachiller en Economía y Gestión de las Organizaciones",
-        "school": "Instituto Presbítero Mauro Golé - Maipú",
-        "edudate":"Finalizado 2009 - Promedio General de 9,13/10."
-    },
-    {
-        "title": "Curso de Desarrollo Web Full Stack (HTML,CSS, Javascript, Java)",
-        "school": "Argentina Programa",
-        "edudate": "Finalizado Mayo 2022"
 
-    }
-]
+    "name": "Maribel Aizpitarte",
+    "profileimg": "../../assets/images/me.jpg",
+
+    "imgemployer1": "../../../assets/images/emp1.jpg",
+    "employer1": "AVALITH",
+    "rol1": "HR ASSISTANT",
+    "date1": "Julio. 2020 - Actualidad",
+    "task11": "Gestión de ingreso de colaboradores",
+    "task21": "Gestión de novedades para liquidación",
+    "task31": "Gestión y coordinación de beneficios y regalos en Argentina y Ecuador",
+    "task41": "Relevamiento y armado de Procesos Internos",
+
+    "imgemployer2": "../../../assets/images/emp2.jpg",
+    "employer2": "GRUPO FAVA",
+    "rol2": "ADMINISTRATIVA DE RRHH",
+    "date2": "Junio. 2018 - Julio 2020",
+    "task12": "Gestión de ingreso de personal",
+    "task22": " Liquidación de comisiones de vendedores",  
+    "task32": "Liquidación de sueldos (CCT 130/75) e impresión de recibos",
+    "task42": "Confección del F.931 a través de aplicativo de Libro de Sueldos Digital",
+    "task52": "Generación de asientos contables",
+    "task62": "Liquidaciones finales y confección de certificados legales.",
+    "task72": "Uso de Tango Astor",
+    
+    "imgemployer3": "../../../assets/images/emp3.jpg",
+    "employer3": "ALVAREZ ARGÜELLES HOTELES",
+    "rol3": "ADMINISTRATIVA DE RRHH",
+    "date3": "Julio 2016 - Junio 2018",
+    "task13": "Confección de legajos",
+    "task23": "Control de ausentismo",
+    "task33": "Gestión de novedades",
+    "task43": "Liquidación de quincenas y mensuales",
+    "task53": "Denuncia a ART",
+    "task63": "Cargas sociales",
+    "task73": "Confección de libro sueldos",
+    "task83": "Uso de Payroll",
+
+    "imgemployer4": "../../../assets/images/emp4.jpg",
+    "employer4": "TOYOMAR",
+    "rol4": "ADMINISTRATIVA",
+    "date4": "Febrero 2015 - Abril 2016",
+    "task14": "Atención a proveedores",
+    "task24": "Conciliación de cuentas",
+    "task34": "Atención telefónica",
+    "task44": "Gestión de pagos y cobranzas",
+    "task54": "Data Entry",
+    "task64": "ABM",
+
+    "imgschool1": "../../../assets/images/esc1.png",
+    "title1": "LICENCIADA EN ADMINISTRACIÓN",
+    "school1": "UNIVERSIDAD NACIONAL DE MAR DEL PLATA",
+    "edudate1":"Finalizado Julio 2018",
+    
+    "imgschool2": "../../../assets/images/esc2.jpg",
+    "title2": "Bachiller en Economía y Gestión de las Organizaciones",
+    "school2": "Instituto Presbítero Mauro Golé - Maipú",
+    "edudate2":"Finalizado 2009 - Promedio General de 9,13/10.",
+
+    "imgschool3": "../../../assets/images/esc3.png",
+    "title3": "Curso de Desarrollo Web Full Stack (HTML,CSS, Javascript, Java)",
+    "school3": "Argentina Programa",
+    "edudate3": "Finalizado Mayo 2022",
+
+    "skill1": "English",
+    "skill2": "HTML",
+    "skill3": "CSS",
+    "skill4": "Javascript",
+    "skill5": "Java",
+    "skill6": "Python"
 }

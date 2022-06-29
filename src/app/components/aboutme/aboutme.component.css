@@ -19,3 +19,8 @@ p{
     padding: 2px 2px;
     text-align: center;
 }
+#logoedit{
+    height:155px;
+    width:155px;
+    background-color: green;
+}
