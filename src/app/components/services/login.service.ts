@@ -1,10 +1,12 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 
+
 export class User {
   constructor(
     public usuario: string,
-    public contrasena: string) { }
+    public contrasena: string) {}
+
 }
 
 var users = [

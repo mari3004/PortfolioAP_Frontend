@@ -17,7 +17,7 @@ export class LoginComponent implements OnInit {
 
   login() {
     if(!this._service.login(this.user)){
-        this.errorMsg = 'Hay un error en su usaario y/o contraseña. Vuelva a intentarlo';
+        this.errorMsg = 'Hay un error en su usuario y/o contraseña. Vuelva a intentarlo';
     }
 }
   ngOnInit(): void {

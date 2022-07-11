@@ -29,7 +29,8 @@ import { InicioComponent } from './components/inicio/inicio.component';
     ContactComponent,
     FooterComponent,
     LoginComponent,
-    InicioComponent
+    InicioComponent,
+    
   ],
 
   imports: [
@@ -38,6 +39,7 @@ import { InicioComponent } from './components/inicio/inicio.component';
     AppRoutingModule,
     HttpClientModule,
     NgCircleProgressModule.forRoot({}),
+    
 
   ],
 

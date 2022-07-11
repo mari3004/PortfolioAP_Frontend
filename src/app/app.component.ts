@@ -14,7 +14,9 @@ export class AppComponent implements OnInit {
 ngOnInit(){
     this._service.checkCredentials();
 }
-
+saveData() {
+  sessionStorage.setItem('name', 'Sesioniniciada');
+}
 logout() {
     this._service.logout();
 }
