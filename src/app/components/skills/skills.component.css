@@ -14,4 +14,18 @@ h1 {
     text-align: center;
     text-decoration: underline;
     padding: 10px;
+    font-size: 30px;
+}
+.edit{
+    margin: 0px;
+    padding: 5px;
+    border: #99A3A4;
+    border-color: #99A3A4;
+    background-color: transparent !important;
+    text-align: right !important;
+}
+i{
+    color: #99A3A4;
+    border-color: #99A3A4;
+    border-radius:2px;
 }

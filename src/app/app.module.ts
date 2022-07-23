@@ -8,15 +8,26 @@ import { ProjectsComponent } from './components/projects/projects.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { LoginComponent } from './components/navbar/login/login.component';
+import { FormtitleComponent } from './components/title/formtitle.component';
+import { FormeducationComponent } from './components/information/formeducation.component';
+import { FormexperienceComponent } from './components/information/formexperience.component';
+import { FormskillsComponent } from './components/skills/formskills.component';
 
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
+import { RouterModule } from "@angular/router";
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { InicioComponent } from './components/inicio/inicio.component';
 
+import { PersonaService } from './components/title/persona.service';
+import { ExperienciaService } from './components/information/experiencia.service copy';
+import { EducacionService } from './components/information/educacion.service';
+import { SkillsService } from './components/skills/skills.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+ 
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,20 +41,30 @@ import { InicioComponent } from './components/inicio/inicio.component';
     FooterComponent,
     LoginComponent,
     InicioComponent,
-    
+    FormtitleComponent,
+    FormeducationComponent,
+    FormexperienceComponent,
+    FormskillsComponent,
   ],
 
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
+    RouterModule,
     HttpClientModule,
     NgCircleProgressModule.forRoot({}),
+    BrowserAnimationsModule,
     
-
   ],
 
-  providers: [],
+  providers: [
+    PersonaService,
+    ExperienciaService,
+    EducacionService,
+    SkillsService,
+  ],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }

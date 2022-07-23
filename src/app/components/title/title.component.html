@@ -2,19 +2,18 @@
     <div class="row">
         <div class="foto text-center col-sm-12 col-md-6 col-lg-6">
             <img class="perfil" 
-            [src]="miPorfolio.profileimg"
+            src="../../../assets/images/me.jpg"
             alt="perfil">
         </div>
 
-        <div class="texto text-center col-sm-12 col-md-6 col-lg-6">
+        <div class="texto text-center col-sm-11 col-md-5 col-lg-5">
             <div id="name" class="align right">
-                <h1>{{miPorfolio.name}} <sup><img src="../../../assets/images/pencil.png" id="edit" alt="" ></sup></h1><br>
-
+                <h1><!--{{persona.nombre}}{{persona.apellido}}-->{{miPorfolio.name}}</h1><br>
                 <h2>Bienvenidos a mi portfolio<br></h2>
-                <h4>El mismo fue realizado a traves del curso de Argentina Programa del Ministerio de Desarrollo Productivo, 
-                    la Cámara Argentina de la Industria de Software (CESSI) y el Instituto Nacional de Tecnología Industrial (INTI).
-                </h4>
             </div>    
+        </div>
+        <div class="text-right col-sm-1 col-md-1 col-lg-1">
+            <button class="edit" type="button" [routerLink]="['/inicio/edittitulo']"><i class="bi bi-pencil" width="16" height="16" fill="currentColor"alt=""></i></button>
         </div>
     </div>
 </div>

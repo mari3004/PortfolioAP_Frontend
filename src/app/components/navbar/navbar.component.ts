@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialogConfig } from '@angular/material/dialog';
 import { PorfolioService } from '../services/porfolio.service';
 
 @Component({
@@ -7,9 +8,7 @@ import { PorfolioService } from '../services/porfolio.service';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  Login() {
-    alert('Please Login')
-  }
+
   miPorfolio:any;
 
   constructor(private datosPorfolio:PorfolioService) { }
@@ -18,7 +17,11 @@ export class NavbarComponent implements OnInit {
     this.datosPorfolio.obtenerDatos().subscribe(data => {
       console.log(data);
       this.miPorfolio=data
+
     })
+  }
+  openDialog(): void {
+    const dialogConfig = new MatDialogConfig();
   }
 
 }

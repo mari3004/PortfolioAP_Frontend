@@ -1,12 +1,12 @@
 <div class="login-page">
-    <h2 class="text-center" method="post">¡Bienvenido!</h2>
-    <h4 class="text-center">Ingrese el usuario y contraseña dado:</h4>
-    <div class="form">
-      <form class="login-form">
-        <input [(ngModel)]="user.usuario" type="text" name="user" placeholder="usuario" ngModel required size="20">
-        <input [(ngModel)]="user.contrasena" type="password" name="pass" placeholder="contraseña" ngModel required size="15">
-        <span>{{errorMsg}}</span>
-        <button (click)="login()" type="submit" style="cursor:pointer;" name="action">Ingresar</button>
-      </form>
-    </div>
+  <h2 class="text-center" method="post">¡Bienvenido!</h2>
+  <h4 class="text-center">Ingrese el usuario y contraseña dado:</h4>
+  <div class="form">
+    <form class="login-form" method="post" >
+      <input [(ngModel)]="user.usuario" type="text" class="form-control" name="user" placeholder="usuario" ngModel required size="20">
+      <input [(ngModel)]="user.contrasena" type="password" class="form-control" name="pass" placeholder="contraseña" ngModel required size="15">
+      <span>{{errorMsg}}</span>
+      <button (click)="login()" type="submit" style="cursor:pointer;" name="action" value="login">Ingresar</button>
+    </form>
   </div>
+</div>

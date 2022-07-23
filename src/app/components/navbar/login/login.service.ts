@@ -11,7 +11,6 @@ export class User {
 
 var users = [
   new User('user','ap123ap'),
-  new User('superadmin','maribel')
 ];
 
 @Injectable()
@@ -29,7 +28,7 @@ export class LoginService {
     var authenticatedUser = users.find(u => u.usuario === user.usuario);
     if (authenticatedUser && authenticatedUser.contrasena === user.contrasena){
       localStorage.setItem("user", authenticatedUser.usuario);
-      this._router.navigate(['admin']);
+      this._router.navigate(['user']);
       return true;
     }
     return false;
@@ -41,4 +40,8 @@ export class LoginService {
         this._router.navigate(['login']);
     }
   }
+  public get logIn(): boolean {
+    return (localStorage.getItem('token') !== null);
+
+}
 }

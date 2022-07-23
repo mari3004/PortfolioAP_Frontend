@@ -1,0 +1,63 @@
+<div class="window-notice">
+  <div class="content">
+    <div class="card-header text-center col-sm-12 col-md-12 col-lg-12"><h2>{{titulo}}</h2></div>
+    <div class="card-body">
+
+      <form (ngSubmit)="updateedu()">
+        <div class="form-group row">
+          <label for="titulo" class="col-form-label col-sm-2">Titulo</label>
+          <div class="col-sm-6">
+            <input
+              type="text"
+              class="form-control"
+              [ngModel]="educacion.titulo"
+              name="titulo"
+              placeholder="Titulo"
+            />
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label for="establecimiento" class="col-form-label col-sm-2">Establecimiento</label>
+          <div class="col-sm-6">
+            <input
+              type="text"
+              class="form-control"
+              [ngModel]="educacion.establecimiento"
+              name="establecimiento"
+              placeholder="Establecimiento"/>
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label for="ingreso" class="col-form-label col-sm-2">Mes y año de ingreso</label>
+          <div class="col-sm-3">
+            <input
+              type="text"
+              class="form-control"
+              [ngModel]="educacion.fechadeingreso"
+              name="ingreso"
+              placeholder="Mes en letras y año en numero"/>
+          </div>
+          <label for="egreso" class="col-form-label col-sm-2">Mes y año de egreso</label>
+          <div class="col-sm-3">
+            <input
+              type="text"
+              class="form-control"
+              [ngModel]="educacion.fechadeegreso"
+              name="egreso"
+              placeholder="Mes en letras y año en numero"/>
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <div class="col-sm-12">
+            <button class="btn btn-secondary" role="button">Modificar</button>
+          </div>
+        </div>
+
+
+      </form>
+    </div>
+  </div>
+</div>

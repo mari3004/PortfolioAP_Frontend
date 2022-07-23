@@ -37,12 +37,19 @@
                     src="../../assets/images/github.png" 
                     alt="Git"></a>
                 </li>
+                <li class="nav-item">
+                    <a href="https://api.whatsapp.com/send?phone=542236923412">
+                    <img id="logo" 
+                    src="../../assets/images/whatsapp.png" 
+                    alt="Whastapp"></a>
+                </li>
             </ul>
         </div>
         <div class="col-sm-12 col-md-2 col-lg-2"id="sesionclass">
             <button id="sesion"
                     type="submit"
-                    class="btn-lg">
+                    class="btn-lg"
+                    (click)="openDialog()">
                 <a routerLink="/login" style= "text-decoration:none">
                     Iniciar Sesion</a>
             </button>
