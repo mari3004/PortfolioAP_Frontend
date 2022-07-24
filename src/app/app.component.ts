@@ -15,7 +15,7 @@ ngOnInit(){
     this._service.checkCredentials();
 }
 saveData() {
-  sessionStorage.setItem('name', 'Sesioniniciada');
+  sessionStorage.setItem('user', '123ap123');
 }
 logout() {
     this._service.logout();

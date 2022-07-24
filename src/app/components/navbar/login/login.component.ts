@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
 import {LoginService, User} from './login.service';
-
+import swal from 'sweetalert2';
 
 @Component({
   selector: 'app-login',

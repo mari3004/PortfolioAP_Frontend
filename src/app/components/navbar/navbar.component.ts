@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialogConfig } from '@angular/material/dialog';
 import { PorfolioService } from '../services/porfolio.service';
+import { LoginService } from './login/login.service';
+import swal from 'sweetalert2';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -11,7 +14,9 @@ export class NavbarComponent implements OnInit {
 
   miPorfolio:any;
 
-  constructor(private datosPorfolio:PorfolioService) { }
+  constructor(public loginservice:LoginService,
+    private datosPorfolio:PorfolioService,
+    private router:Router) { }
 
   ngOnInit(): void {
     this.datosPorfolio.obtenerDatos().subscribe(data => {
@@ -23,5 +28,9 @@ export class NavbarComponent implements OnInit {
   openDialog(): void {
     const dialogConfig = new MatDialogConfig();
   }
+  /*logout(): void {
+    swal.fire('Logout', `Has cerrado sesión con exito`, 'success');
+    this.router.navigate(['/login']);
+  }*/
 
 }

@@ -23,7 +23,7 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
 import { InicioComponent } from './components/inicio/inicio.component';
 
 import { PersonaService } from './components/title/persona.service';
-import { ExperienciaService } from './components/information/experiencia.service copy';
+import { ExperienciaService } from './components/information/experiencia.service';
 import { EducacionService } from './components/information/educacion.service';
 import { SkillsService } from './components/skills/skills.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';

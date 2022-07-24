@@ -20,7 +20,9 @@ export class LoginService {
     private _router: Router){}
 
   logout() {
+    localStorage.clear();
     localStorage.removeItem("user");
+    localStorage.removeItem("ap123ap");
     this._router.navigate(['login']);
   }
 
@@ -28,6 +30,7 @@ export class LoginService {
     var authenticatedUser = users.find(u => u.usuario === user.usuario);
     if (authenticatedUser && authenticatedUser.contrasena === user.contrasena){
       localStorage.setItem("user", authenticatedUser.usuario);
+      localStorage.setItem("ap123ap", authenticatedUser.usuario);
       this._router.navigate(['user']);
       return true;
     }
@@ -37,7 +40,7 @@ export class LoginService {
 
    checkCredentials(){
     if (localStorage.getItem("user") === null){
-        this._router.navigate(['login']);
+        this._router.navigate(['/login']);
     }
   }
   public get logIn(): boolean {
