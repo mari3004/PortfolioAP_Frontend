@@ -11,7 +11,7 @@ import { SkillsService} from './skills.service';
 export class SkillsComponent implements OnInit {
   
   miPorfolio:any;
-  skills: Skills[] = [];
+  skills: Skills[];
 
   constructor(
     private datosPorfolio:PorfolioService,
