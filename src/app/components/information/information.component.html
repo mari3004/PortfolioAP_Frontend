@@ -5,81 +5,33 @@
         <h1>Experience</h1>
         
         <div>
-            <ul>
-                <h4><img id="logoemp" [src]="miPorfolio.imgemployer1"/> {{miPorfolio.employer1}} - {{miPorfolio.rol1}}</h4>
-                <h6>{{miPorfolio.date1}}</h6>
+            <ul *ngFor="let experiencia of laboral">
+                <h4><img id="logoemp" [src]="miPorfolio.imgemployer"/> {{experiencia.empresa}} - {{experiencia.rol}}</h4>
+                <h6>{{experiencia.fechadeingreso}}{{experiencia.fechadeegreso}}</h6>
                 <ul>
-                    <li>{{miPorfolio.task11}}</li>
-                    <li>{{miPorfolio.task21}}</li>
-                    <li>{{miPorfolio.task31}}</li>
-                    <li>{{miPorfolio.task41}} </li>
+                    <li>{{experiencia.tarea1}}</li>
+                    <li>{{experiencia.tarea2}}</li>
+                    <li>{{experiencia.tarea3}}</li>
+                    <li>{{experiencia.tarea4}} </li>
+                    <li>{{experiencia.tarea5}} </li>
+                    <li>{{experiencia.tarea6}} </li>
+                    <li>{{experiencia.tarea7}} </li>
+                    <li>{{experiencia.tarea8}} </li>
+                    <li>{{experiencia.tarea9}} </li>
                 </ul>
             </ul>     
         </div>
-        <div>
-            <ul>
-                <h4><img id="logoemp" [src]="miPorfolio.imgemployer2"/>{{miPorfolio.employer2}} - {{miPorfolio.rol2}}</h4>
-                <h6>{{miPorfolio.date2}}</h6>        
-                <ul>
-                    <li>{{miPorfolio.task12}}</li>
-                    <li>{{miPorfolio.task22}}</li>
-                    <li>{{miPorfolio.task32}}</li>
-                    <li>{{miPorfolio.task42}} </li>
-                    <li>{{miPorfolio.task52}}</li>
-                    <li>{{miPorfolio.task62}}</li>
-                    <li>{{miPorfolio.task72}}</li>   
-                </ul>
-            </ul>
-        </div>
-        <div>
-            <ul>
-                <h4><img id="logoemp" [src]="miPorfolio.imgemployer3"/>{{miPorfolio.employer3}} - {{miPorfolio.rol3}}</h4>
-                <h6>{{miPorfolio.date3}}</h6>        
-                <ul>                
-                    <li>{{miPorfolio.task13}}</li>
-                    <li>{{miPorfolio.task23}}</li>
-                    <li>{{miPorfolio.task33}}</li>
-                    <li>{{miPorfolio.task43}}</li>
-                    <li>{{miPorfolio.task53}}</li>
-                    <li>{{miPorfolio.task63}}</li>
-                    <li>{{miPorfolio.task73}}</li>
-                    <li>{{miPorfolio.task83}}</li>        
-                </ul>
-            </ul>
-        </div>
-        <div>
-            <ul>
-                <h4><img id="logoemp" [src]="miPorfolio.imgemployer4"/>{{miPorfolio.employer4}} - {{miPorfolio.rol4}}</h4>
-                <h6>{{miPorfolio.date4}}</h6> 
-                <ul>    
-                    <li>{{miPorfolio.task14}}</li>
-                    <li>{{miPorfolio.task24}}</li>
-                    <li>{{miPorfolio.task34}}</li>
-                    <li>{{miPorfolio.task44}}</li>
-                    <li>{{miPorfolio.task54}}</li>
-                    <li>{{miPorfolio.task64}}</li>
-                </ul>
-            </ul>
-        </div>
     </div>
-
+        
     <div class="info col-sm-6 col-md-6 col-lg-6">
         
         <button class="edit" type="button" [routerLink]="['/informacion/editedu']"><i class="bi bi-pencil" width="16" height="16" fill="currentColor"alt=""></i></button>
         <h1>Education</h1>
 
-        <ul>
-            <h3><img id="logoemp" [src]="miPorfolio.imgschool1"/>{{miPorfolio.title1}} </h3>
-            <h4>{{miPorfolio.school1}}</h4>
-            <h5>{{miPorfolio.edudate1}}</h5><br><br>        
-            
-            <h3><img id="logoemp" [src]="miPorfolio.imgschool2"/>{{miPorfolio.title2}} </h3>
-            <h4>{{miPorfolio.school2}}</h4>
-            <h5>{{miPorfolio.edudate2}}</h5><br><br> 
-
-            <h3><img id="logoemp" [src]="miPorfolio.imgschool3"/>{{miPorfolio.title3}}</h3>
-            <h4>{{miPorfolio.school3}}</h4>
-            <h5>{{miPorfolio.edudate3}}</h5><br><br>
+        <ul *ngFor="let educacion of escuela">
+            <h3><img id="logoemp" [src]="miPorfolio.imgschool"/>{{educacion.titulo}} </h3>
+            <h4>{{educacion.establecimiento}}</h4>
+            <h5>{{educacion.fechadeingreso}}{{educacion.fechadeegreso}}</h5><br><br>        
         </ul>        
     </div>
 

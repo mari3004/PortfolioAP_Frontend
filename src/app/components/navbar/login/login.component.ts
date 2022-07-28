@@ -44,8 +44,8 @@ export class LoginComponent implements OnInit {
       Swal.close();
 
       if ( this.recordar ){
-        localStorage.setItem('email', this.usuario.email);
-      }
+        localStorage.setItem('email', this.usuario.email)
+      };
       this.router.navigateByUrl('/inicio');
 
     }, (err) => {

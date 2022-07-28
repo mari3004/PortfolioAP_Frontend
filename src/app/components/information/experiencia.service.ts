@@ -13,6 +13,7 @@ export class ExperienciaService {
   private urlEndPoint: string = 'https://guarded-refuge-65976.herokuapp.com/api/experiencia/';
 
   private httpHeaders = new HttpHeaders({'Content-Type': 'application/json'});
+
   constructor(private http: HttpClient,
     private router: Router) { }
 
@@ -25,6 +26,7 @@ export class ExperienciaService {
 }
   
   getExperiencia(): Observable <Experiencia[]> {
+    
     return this.http.get<Experiencia[]>(this.urlEndPoint).pipe(
       catchError(e => {
         this.isNoAutorizado(e);
