@@ -27,11 +27,8 @@ export class PersonaService {
   
   getPersona(): Observable <Persona[]> {
     //return of(Persona);
-    return this.http.get<Persona[]>(this.urlEndPoint).pipe(
-      catchError(e =>{
-        this.isNoAutorizado(e);
-        return throwError(e);
-      })
+    return this.http.get(this.urlEndPoint).pipe(
+      map(response => response as Persona[])
     )
   }
 
@@ -51,7 +48,6 @@ export class PersonaService {
         return throwError(e);
       })
     );
-  
   }
 
   getPersonaid(id: number): Observable<Persona> {

@@ -13,6 +13,7 @@ export class SkillsService {
   private urlEndPoint: string = 'https://guarded-refuge-65976.herokuapp.com/api/skills/';
 
   private httpHeaders = new HttpHeaders({'Content-Type': 'application/json'});
+
   constructor(private http: HttpClient,
     private router : Router) { }
 
@@ -25,6 +26,7 @@ export class SkillsService {
 }
   
   getSkills(): Observable <Skills[]> {
+    
     return this.http.get<Skills[]>(this.urlEndPoint).pipe(
       catchError(e => {
         this.isNoAutorizado(e);

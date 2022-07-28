@@ -18,10 +18,10 @@ export class SkillsComponent implements OnInit {
     public skillsService:SkillsService) { }
 
   ngOnInit(): void {
-    this.datosPorfolio.obtenerDatos().subscribe(data => {
+    /*this.datosPorfolio.obtenerDatos().subscribe(data => {
       console.log(data);
       this.miPorfolio=data;
-    });
+    });*/
     this.skillsService.getSkills().subscribe(
       skills => this.skills = skills);
   }

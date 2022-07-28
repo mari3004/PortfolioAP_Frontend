@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { PorfolioService } from '../services/porfolio.service';
 import { Persona } from './persona';
 import { PersonaService } from './persona.service';
 /*import swal from 'sweetalert2';*/
@@ -11,22 +10,16 @@ import { PersonaService } from './persona.service';
 })
 export class TitleComponent implements OnInit {
   
-  miPorfolio:any;
-  public persona: Persona = new Persona();
+  personas: Persona[];
 
   constructor(
-    private datosPorfolio:PorfolioService,
     public personaService: PersonaService) {
 
    }
 
    ngOnInit(): void {
-    this.datosPorfolio.obtenerDatos().subscribe(data => {
-      console.log(data);
-      this.miPorfolio=data});
-
     this.personaService.getPersona().subscribe(
-      persona => persona = persona)
+      personas => this.personas = personas);
   }
   
 
