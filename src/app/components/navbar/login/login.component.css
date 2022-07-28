@@ -1,6 +1,8 @@
 *{
   background-color: #2D066B;
   color: #99A3A4;
+  background-image: url(../../../../assets/images/fondo2.jpg);
+  width: 100%;
 }
 #login-page {
   width: 360px;
@@ -11,6 +13,7 @@
   height: 100%;
   color: #99A3A4;
 }
+
 .form {
   position: relative;
   z-index: 1;

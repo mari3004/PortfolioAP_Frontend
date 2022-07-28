@@ -12,13 +12,7 @@ export class AppComponent implements OnInit {
     private _service:LoginService){}
 
 ngOnInit(){
-    this._service.checkCredentials();
 }
-saveData() {
-  sessionStorage.setItem('user', '123ap123');
-}
-logout() {
-    this._service.logout();
-}
+
 
 }

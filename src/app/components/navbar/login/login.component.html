@@ -2,11 +2,59 @@
   <h2 class="text-center" method="post">¡Bienvenido!</h2>
   <h4 class="text-center">Ingrese el usuario y contraseña dado:</h4>
   <div class="form">
-    <form class="login-form" method="post" >
-      <input [(ngModel)]="user.usuario" type="text" class="form-control" name="user" placeholder="usuario" ngModel required size="20">
-      <input [(ngModel)]="user.contrasena" type="password" class="form-control" name="pass" placeholder="contraseña" ngModel required size="15">
-      <span>{{errorMsg}}</span>
-      <button (click)="login()" type="submit" style="cursor:pointer;" name="action" value="login">Ingresar</button>
+    <form class="inicio"
+      (ngSubmit)="Log(f)"
+      #f = "ngForm" 
+      class="login-form" method="post">
+
+      <span
+      *ngIf="f.submitted && f.controls['email'].errors"
+      class="text-danger"
+      >El email es obligatorio</span>
+      <input
+        [(ngModel)]="usuario.email"
+        required
+        type="text"
+        class="form-control"
+        name="email"
+        placeholder="Email"/>
+
+      <span
+      *ngIf="f.submitted && f.controls['password'].errors"
+      class="text-danger"
+      >La contraseña debe tener 6 caracteres</span>
+      <input
+      [(ngModel)]="usuario.password"
+        required
+        type="password"
+        class="form-control"
+        name="password"
+        minlength="6"
+        placeholder="Contraseña"
+
+      />
+      <div class="flex-sb-m w-full p-t-3 p-b-24">
+        <div class="contact100-form-checkbox">
+          <input
+            [(ngModel)]="recordar"
+            class="input-checkbox100"
+            id="ckb1"
+            type="checkbox"
+            name="remember-me"
+          />
+          <label class="label-checkbox100" for="ckb1">
+            Recordar mi usuario
+          </label>
+        </div>
+        <a routerLink="/registro" class="txt1"> Crear usuario </a>
+      </div>
+      <button
+        type="submit"
+        style="cursor: pointer"
+        name="action"
+        >
+        Ingresar
+      </button>
     </form>
   </div>
 </div>

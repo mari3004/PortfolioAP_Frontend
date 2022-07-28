@@ -27,6 +27,7 @@ import { ExperienciaService } from './components/information/experiencia.service
 import { EducacionService } from './components/information/educacion.service';
 import { SkillsService } from './components/skills/skills.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RegistroComponent } from './components/navbar/login/registro/registro.component';
  
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FormeducationComponent,
     FormexperienceComponent,
     FormskillsComponent,
+    RegistroComponent,
   ],
 
   imports: [

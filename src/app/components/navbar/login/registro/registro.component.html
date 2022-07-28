@@ -1,0 +1,54 @@
+<div class="login-page">
+  <h2 class="text-center" method="post">¡Bienvenido!</h2>
+  <h4 class="text-center">Crear usuario</h4>
+  <div class="form">
+    <form
+      (ngSubmit)="onSubmit(f)"
+      #f="ngForm"
+      class="login-registro"
+      method="post"
+    >
+
+      <span
+        *ngIf="f.submitted && f.controls['email'].errors"
+        class="text-danger"
+        >El email es obligatorio</span
+      >
+      <input
+        [(ngModel)]="usuario.email"
+        required
+        type="text"
+        class="form-control"
+        name="email"
+        placeholder="Email"
+      />
+
+      <span
+        *ngIf="f.submitted && f.controls['password'].errors"
+        class="text-danger"
+        >Al menos 6 caracteres</span
+      >
+      <input
+        [(ngModel)]="usuario.password"
+        required
+        type="password"
+        class="form-control"
+        name="password"
+        minlength="6"
+        placeholder="Contraseña"
+      />
+      <div class="flex-sb-m w-full p-t-3 p-b-24">
+
+
+        <div>
+          <a routerLink="/login" class="txt1">
+            ¿Ya tienes cuenta? / Ingresar
+          </a>
+        </div>
+      </div>
+      <button type="submit" style="cursor: pointer" name="action" value="login">
+        Crear usuario
+      </button>
+    </form>
+  </div>
+</div>

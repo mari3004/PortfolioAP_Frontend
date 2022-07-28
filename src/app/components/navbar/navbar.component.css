@@ -28,11 +28,7 @@ ul{
 li{
     padding: 0px;
 }
-a:hover{
-    text-decoration: underline;
-    color: blueviolet;
-    background-color: #5D2B68;
-}
+
 
 #logo {
     width: 35px;
@@ -45,8 +41,20 @@ button{
     width: 70%;
     float: right;
     margin-right: 2px;
-
 }
+a:link{
+    font-style: bold;
+    box-shadow: none;
+}
+a:visited {
+    color: #99A3A4;
+  }
+a:hover{
+    text-decoration: underline;
+    color: blueviolet;
+    background-color: #5D2B68;
+}
+
 @media (max-width:767px) {
     button {
         position: relative;

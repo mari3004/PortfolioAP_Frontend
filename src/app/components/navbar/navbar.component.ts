@@ -28,9 +28,14 @@ export class NavbarComponent implements OnInit {
   openDialog(): void {
     const dialogConfig = new MatDialogConfig();
   }
-  /*logout(): void {
-    swal.fire('Logout', `Has cerrado sesión con exito`, 'success');
-    this.router.navigate(['/login']);
-  }*/
 
+
+  estaAutenticado(){
+    return this.loginservice.estaAutenticado();
+  }
+
+  salir(){
+    this.loginservice.logout();
+    this.router.navigateByUrl('/login');
+  }
 }
