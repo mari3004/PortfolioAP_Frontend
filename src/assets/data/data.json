@@ -1,43 +1,47 @@
 {
 
     "name": "Maribel Aizpitarte",
-    "profileimg": "../../assets/images/me.jpg"
-}
-{
-    "imgemployer": "../../../assets/images/emp1.jpg",
-    "employer": "AVALITH",
-    "rol": "HR ASSISTANT",
-    "date": "Julio. 2020 - Actualidad",
-    "task1": "Gestión de ingreso de colaboradores",
-    "task1": "Gestión de novedades para liquidación",
-    "task3": "Gestión y coordinación de beneficios y regalos en Argentina y Ecuador",
-    "task4": "Relevamiento y armado de Procesos Internos",
+    "profileimg": "../../assets/images/me.jpg",
 
-    "imgemployer": "../../../assets/images/emp2.jpg",
-    "employer": "GRUPO FAVA",
-    "rol": "ADMINISTRATIVA DE RRHH",
-    "date": "Junio. 2018 - Julio 2020",
-    "task1": "Gestión de ingreso de personal",
-    "task2": " Liquidación de comisiones de vendedores",  
-    "task3": "Liquidación de sueldos (CCT 130/75) e impresión de recibos",
-    "task4": "Confección del F.931 a través de aplicativo de Libro de Sueldos Digital",
-    "task5": "Generación de asientos contables",
-    "task6": "Liquidaciones finales y confección de certificados legales.",
-    "task7": "Uso de Tango Astor",
-    
-    "imgemployer": "../../../assets/images/emp3.jpg",
-    "employer": "ALVAREZ ARGÜELLES HOTELES",
-    "rol": "ADMINISTRATIVA DE RRHH",
-    "date": "Julio 2016 - Junio 2018",
-    "task1": "Confección de legajos",
-    "task2": "Control de ausentismo",
-    "task3": "Gestión de novedades",
-    "task4": "Liquidación de quincenas y mensuales",
-    "task5": "Denuncia a ART",
-    "task6": "Cargas sociales",
-    "task7": "Confección de libro sueldos",
-    "task8": "Uso de Payroll",
+    "experiencia":[{
+        "imgemployer": "../../../assets/images/emp1.jpg",
+        "employer": "AVALITH",
+        "rol": "HR ASSISTANT",
+        "date": "Julio. 2020 - Actualidad",
+        "task1": "Gestión de ingreso de colaboradores",
+        "task2": "Gestión de novedades para liquidación",
+        "task3": "Gestión y coordinación de beneficios y regalos en Argentina y Ecuador",
+        "task4": "Relevamiento y armado de Procesos Internos"
+    },
+    {
 
+        "imgemployer": "../../../assets/images/emp2.jpg",
+        "employer": "GRUPO FAVA",
+        "rol": "ADMINISTRATIVA DE RRHH",
+        "date": "Junio. 2018 - Julio 2020",
+        "task1": "Gestión de ingreso de personal",
+        "task2": " Liquidación de comisiones de vendedores",  
+        "task3": "Liquidación de sueldos (CCT 130/75) e impresión de recibos",
+        "task4": "Confección del F.931 a través de aplicativo de Libro de Sueldos Digital",
+        "task5": "Generación de asientos contables",
+        "task6": "Liquidaciones finales y confección de certificados legales.",
+        "task7": "Uso de Tango Astor"
+    },
+    {    
+        "imgemployer": "../../../assets/images/emp3.jpg",
+        "employer": "ALVAREZ ARGÜELLES HOTELES",
+        "rol": "ADMINISTRATIVA DE RRHH",
+        "date": "Julio 2016 - Junio 2018",
+        "task1": "Confección de legajos",
+        "task2": "Control de ausentismo",
+        "task3": "Gestión de novedades",
+        "task4": "Liquidación de quincenas y mensuales",
+        "task5": "Denuncia a ART",
+        "task6": "Cargas sociales",
+        "task7": "Confección de libro sueldos",
+        "task8": "Uso de Payroll"
+    },
+    {
     "imgemployer": "../../../assets/images/emp4.jpg",
     "employer": "TOYOMAR",
     "rol": "ADMINISTRATIVA",
@@ -48,28 +52,22 @@
     "task4": "Gestión de pagos y cobranzas",
     "task5": "Data Entry",
     "task6": "ABM"
-}
-{
-    "imgschool": "../../../assets/images/esc1.png",
-    "title": "LICENCIADA EN ADMINISTRACIÓN",
-    "school": "UNIVERSIDAD NACIONAL DE MAR DEL PLATA",
-    "edudate":"Finalizado Julio 2018",
-    
-    "imgschool": "../../../assets/images/esc2.jpg",
-    "title": "Bachiller en Economía y Gestión de las Organizaciones",
-    "school": "Instituto Presbítero Mauro Golé - Maipú",
-    "edudate":"Finalizado 2009 - Promedio General de 9,13/10.",
+    }],
 
-    "imgschool": "../../../assets/images/esc3.png",
-    "title": "Curso de Desarrollo Web Full Stack (HTML,CSS, Javascript, Java)",
-    "school": "Argentina Programa",
-    "edudate": "Finalizado Mayo 2022"
-}
-{
-    "skill": "English",
-    "skill": "HTML",
-    "skill": "CSS",
-    "skill": "Javascript",
-    "skill": "Java",
-    "skill": "Python"
+    "educacion":[{
+        "imgschool": "../../../assets/images/esc1.png",
+        "title": "LICENCIADA EN ADMINISTRACIÓN",
+        "school": "UNIVERSIDAD NACIONAL DE MAR DEL PLATA",
+        "edudate":"Finalizado Julio 2018"
+    },
+    {   "imgschool": "../../../assets/images/esc2.jpg",
+        "title": "Bachiller en Economía y Gestión de las Organizaciones",
+        "school": "Instituto Presbítero Mauro Golé - Maipú",
+        "edudate":"Finalizado 2009 - Promedio General de 9,13/10."
+    },
+    {   "imgschool": "../../../assets/images/esc3.png",
+        "title": "Curso de Desarrollo Web Full Stack (HTML,CSS, Javascript, Java)",
+        "school": "Argentina Programa",
+        "edudate": "Finalizado Mayo 2022"
+    }]
 }
