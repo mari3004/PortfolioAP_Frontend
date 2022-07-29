@@ -10,7 +10,7 @@ import swal from 'sweetalert2';
 })
 
 export class ExperienciaService {
-  private urlEndPoint: string = 'https://guarded-refuge-65976.herokuapp.com/api/experiencia/';
+  private urlEndPoint: 'https://guarded-refuge-65976.herokuapp.com/api/experiencia';
 
   private httpHeaders = new HttpHeaders({'Content-Type': 'application/json'});
 

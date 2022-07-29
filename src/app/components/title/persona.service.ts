@@ -10,7 +10,7 @@ import swal from 'sweetalert2';
 })
 
 export class PersonaService {
-  private urlEndPoint: string = 'https://guarded-refuge-65976.herokuapp.com/api/persona/';
+  private urlEndPoint: string = 'https://guarded-refuge-65976.herokuapp.com/api/persona';
 
   private httpHeaders = new HttpHeaders({'Content-Type': 'application/json'});
   

@@ -10,7 +10,7 @@ import swal from 'sweetalert2';
 })
 
 export class EducacionService {
-  private urlEndPoint: string = 'https://guarded-refuge-65976.herokuapp.com/api/educacion/';
+  private urlEndPoint: string = 'https://guarded-refuge-65976.herokuapp.com/api/educacion';
 
   private httpHeaders = new HttpHeaders({'Content-Type': 'application/json'});
   constructor(private http: HttpClient,
