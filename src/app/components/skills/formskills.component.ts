@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Skills } from './skills';
+import { SkillsService } from './skills.service';
 
 @Component({
   selector: 'app-formskills',
@@ -12,12 +14,16 @@ export class FormskillsComponent implements OnInit {
   public titulo: string= "Actualizar Skills"
 
 
-  constructor() { }
+  constructor(private skillsService: SkillsService, 
+    private router: Router) { }
 
   ngOnInit() {
   }
 
-  updateskill(): void{
+  public updateskill(): void {
+    this.skillsService.edit(this.skills).subscribe(
+      response => this.router.navigate(['/skills'])
+    )
 
   }
 

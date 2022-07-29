@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Experiencia } from './experiencia';
+import { ExperienciaService } from './experiencia.service';
 
 @Component({
   selector: 'app-formexperience',
@@ -11,12 +13,16 @@ export class FormexperienceComponent implements OnInit {
   public experiencia: Experiencia = new Experiencia();
   public titulo: string= "Actualizar Experiencia"
 
-  constructor() { }
+  constructor(private experienciaService: ExperienciaService, 
+    private router: Router) { }
 
   ngOnInit() {
   }
-  updateexp(): void{
-
-  }
+  public updateexp(): void {
+      this.experienciaService.edit(this.experiencia).subscribe(
+        response => this.router.navigate(['/informacion'])
+      )
+  
+    }
 
 }
