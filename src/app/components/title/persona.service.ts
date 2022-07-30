@@ -10,12 +10,16 @@ import swal from 'sweetalert2';
 })
 
 export class PersonaService {
+  persona: any;
   private urlEndPoint: 'https://guarded-refuge-65976.herokuapp.com/api/persona';
 
   private httpHeaders = new HttpHeaders({'Content-Type': 'application/json'});
   
   constructor(private http: HttpClient,
-    private router: Router) { }
+    private router: Router) {
+      http.get(this.urlEndPoint+"/traer").subscribe(response=>{
+        this.persona=response;
+     })}
 
   private isNoAutorizado(e: { status: number; }): boolean {
     if(e.status==401 || e.status == 403){
