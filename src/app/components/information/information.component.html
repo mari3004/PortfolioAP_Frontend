@@ -1,14 +1,14 @@
 <div class="row">
     <div class="info col-sm-6 col-md-6 col-lg-6">
 
-        <button class="edit" type="button" [routerLink]="['/informacion/editexp']"><i class="bi bi-pencil" width="16" height="16" fill="currentColor"alt=""></i></button>
         <h1>Experience</h1>
 
         <div>
             <ul *ngFor="let experiencia of laboral">
+                <button class="edit" type="button" [routerLink]="['/informacion/editexp']"><i class="bi bi-pencil" width="16" height="16" fill="currentColor"alt=""></i></button>
                 <h2><img id="logoemp" src="../../../assets/images/planeta laboral.jpg" > {{experiencia.empresa}} - {{experiencia.rol}}</h2>
                 <h4>{{experiencia.fechadeingreso}} a {{experiencia.fechadeegreso}}</h4>
-                <tr>
+                
                     <td>{{experiencia.tarea1}}</td>
                     <td>{{experiencia.tarea2}}</td>
                     <td>{{experiencia.tarea3}}</td>
@@ -18,21 +18,21 @@
                     <td>{{experiencia.tarea7}} </td>
                     <td>{{experiencia.tarea8}} </td>
                     <td>{{experiencia.tarea9}} </td>
-                </tr>
+                
             </ul>     
         </div>
     </div>
         
     <div class="info col-sm-6 col-md-6 col-lg-6">
         
-        <button class="edit" type="button" [routerLink]="['/informacion/editedu']"><i class="bi bi-pencil" width="16" height="16" fill="currentColor"alt=""></i></button>
+        
         <h1>Education</h1>
 
         <ul *ngFor="let educacion of escuela">
+            <button class="edit" type="button" [routerLink]="['/informacion/editedu']"><i class="bi bi-pencil" width="16" height="16" fill="currentColor"alt=""></i></button>
             <h2><img id="logoemp" src="../../../assets/images/planeta educacion.jpg">{{educacion.titulo}} </h2>
             <h3>{{educacion.establecimiento}}</h3>
             <h4>{{educacion.fechadeingreso}} a {{educacion.fechadeegreso}}</h4><br><br>        
         </ul>        
-    </div>
-
+    </div> 
 </div>
