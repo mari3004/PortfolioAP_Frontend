@@ -15,11 +15,11 @@ h1 {
     text-decoration: underline;
     padding: 10px;
 }
-h3,h5{
+h2,h4{
     padding: 10px;
     display: inline-block;
 }
-h4{
+li{
     padding-left: 6px;
     padding-bottom: 1em;
     

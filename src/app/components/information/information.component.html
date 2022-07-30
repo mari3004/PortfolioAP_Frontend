@@ -6,8 +6,8 @@
         
         <div>
             <ul *ngFor="let experiencia of laboral">
-                <h4><img id="logoemp" [src]="miPorfolio.imgemployer"/> {{experiencia.empresa}} - {{experiencia.rol}}</h4>
-                <h6>{{experiencia.fechadeingreso}}{{experiencia.fechadeegreso}}</h6>
+                <h2><img id="logoemp" src="../../../assets/images/planeta laboral.jpg" > {{experiencia.empresa}} - {{experiencia.rol}}</h2>
+                <h4>{{experiencia.fechadeingreso}}{{experiencia.fechadeegreso}}</h4>
                 <ul>
                     <li>{{experiencia.tarea1}}</li>
                     <li>{{experiencia.tarea2}}</li>
@@ -29,7 +29,7 @@
         <h1>Education</h1>
 
         <ul *ngFor="let educacion of escuela">
-            <h3><img id="logoemp" [src]="miPorfolio.imgschool"/>{{educacion.titulo}} </h3>
+            <h3><img id="logoemp" src="../../../assets/images/planeta educacion.jpg">{{educacion.titulo}} </h3>
             <h4>{{educacion.establecimiento}}</h4>
             <h5>{{educacion.fechadeingreso}}{{educacion.fechadeegreso}}</h5><br><br>        
         </ul>        
