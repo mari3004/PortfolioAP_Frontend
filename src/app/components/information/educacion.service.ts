@@ -10,9 +10,11 @@ import swal from 'sweetalert2';
 })
 
 export class EducacionService {
+
   private urlEndPoint = 'https://guarded-refuge-65976.herokuapp.com/api/educacion';
 
   private httpHeaders = new HttpHeaders({'Content-Type': 'application/json'});
+
   constructor(private http: HttpClient,
     private router: Router) { }
   
@@ -25,6 +27,7 @@ export class EducacionService {
 }
 
   getEducacion(): Observable <Educacion[]> {
+    
     return this.http.get<Educacion[]>(this.urlEndPoint).pipe(
       catchError(e =>{
         this.isNoAutorizado(e);

@@ -16,7 +16,7 @@ export class PersonaService {
   private httpHeaders = new HttpHeaders({'Content-Type': 'application/json'});
   
   constructor(private http: HttpClient,
-    private router: Router) {}
+    private router: Router) { }
 
   private isNoAutorizado(e: { status: number; }): boolean {
     if(e.status==401 || e.status == 403){
@@ -27,9 +27,12 @@ export class PersonaService {
 }
   
   getPersona(): Observable <Persona[]> {
-    //return of(Persona);
-    return this.http.get(this.urlEndPoint).pipe(
-      map(response => response as Persona[])
+    
+    return this.http.get<Persona[]>(this.urlEndPoint).pipe(
+      catchError(e =>{
+        this.isNoAutorizado(e);
+        return throwError(e);
+      })
     )
   }
 
