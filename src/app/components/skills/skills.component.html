@@ -10,7 +10,7 @@
         
         <div class="text-center col-sm-4 col-md-4 col-lg-4">
             <button class="edit" type="button" [routerLink]="['/skills/editskill']"><i class="bi bi-pencil" width="16" height="16" fill="currentColor"alt=""></i></button>
-            <button class="delete" type="button" (onclick)="deleteskill(skill)" ><i class="fa-thin fa-trash-can"width="16" height="16" fill="currentColor"alt=""></i></button>
+            <button class="delete" type="button" (onclick)="deleteskill(skill)" ><i class="fa-solid fa-xmark"width="16" height="16" fill="currentColor"alt=""></i></button>
             <circle-progress
                 [percent]="skill.porcentaje"
                 [radius]="100"

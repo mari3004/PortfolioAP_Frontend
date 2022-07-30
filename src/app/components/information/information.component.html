@@ -10,7 +10,7 @@
         <div>
             <div *ngFor="let experiencia of laboral">
                 <button class="edit" type="button" [routerLink]="['/informacion/editexp']"><i class="bi bi-pencil" width="16" height="16" fill="currentColor"alt=""></i></button>
-                <button class="delete" type="button" (onclick)="deleteexp(experiencia)" ><i class="fa-thin fa-trash-can"width="16" height="16" fill="currentColor"alt=""></i></button>
+                <button class="delete" type="button" (onclick)="deleteexp(experiencia)" ><i class="fa-solid fa-xmark"width="16" height="16" fill="currentColor"alt=""></i></button>
                 <h2><img id="logoemp" src="../../../assets/images/planeta laboral.jpg" > {{experiencia.empresa}} - {{experiencia.rol}}</h2>
                 <h4>{{experiencia.fechadeingreso}} a {{experiencia.fechadeegreso}}</h4>
                 
@@ -40,7 +40,7 @@
 
         <div *ngFor="let educacion of escuela">
             <button class="edit" type="button" [routerLink]="['/informacion/editedu']"><i class="bi bi-pencil" width="16" height="16" fill="currentColor"alt=""></i></button>
-            <button class="delete" type="button" (onclick)="deleteedu(educacion)" ><i class="fa-thin fa-trash-can"width="16" height="16" fill="currentColor"alt=""></i></button>
+            <button class="delete" type="button" (onclick)="deleteedu(educacion)" ><i class="fa-solid fa-xmark"width="16" height="16" fill="currentColor"alt=""></i></button>
             <h2><img id="logoemp" src="../../../assets/images/planeta educacion.jpg">{{educacion.titulo}} </h2>
             <h3>{{educacion.establecimiento}}</h3>
             <h4>{{educacion.fechadeingreso}} a {{educacion.fechadeegreso}}</h4><br><br>        
