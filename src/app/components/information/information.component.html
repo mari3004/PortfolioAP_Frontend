@@ -3,9 +3,14 @@
 
         <h1>Experience</h1>
 
+        <div class="text-right">
+        <button class="new" type="button" [routerLink]="['/information/editexp']"><i class="fa-thin fa-plus"></i></button>
+        </div>
+
         <div>
-            <ul *ngFor="let experiencia of laboral">
+            <tr *ngFor="let experiencia of laboral">
                 <button class="edit" type="button" [routerLink]="['/informacion/editexp']"><i class="bi bi-pencil" width="16" height="16" fill="currentColor"alt=""></i></button>
+                <button class="delete" type="button" (onclick)="deleteexp(experiencia)" ><i class="fa-thin fa-trash-can"></i></button>
                 <h2><img id="logoemp" src="../../../assets/images/planeta laboral.jpg" > {{experiencia.empresa}} - {{experiencia.rol}}</h2>
                 <h4>{{experiencia.fechadeingreso}} a {{experiencia.fechadeegreso}}</h4>
                 
@@ -19,7 +24,7 @@
                     <td>{{experiencia.tarea8}} </td>
                     <td>{{experiencia.tarea9}} </td>
                 
-            </ul>     
+            </tr>     
         </div>
     </div>
         
@@ -28,11 +33,16 @@
         
         <h1>Education</h1>
 
-        <ul *ngFor="let educacion of escuela">
+        <div class="text-right">
+        <button class="new" type="button" [routerLink]="['/information/editedu']"><i class="fa-thin fa-plus"></i></button>
+        </div>
+
+        <tr *ngFor="let educacion of escuela">
             <button class="edit" type="button" [routerLink]="['/informacion/editedu']"><i class="bi bi-pencil" width="16" height="16" fill="currentColor"alt=""></i></button>
+            <button class="delete" type="button" (onclick)="deleteedu(educacion)" ><i class="fa-thin fa-trash-can"></i></button>
             <h2><img id="logoemp" src="../../../assets/images/planeta educacion.jpg">{{educacion.titulo}} </h2>
             <h3>{{educacion.establecimiento}}</h3>
             <h4>{{educacion.fechadeingreso}} a {{educacion.fechadeegreso}}</h4><br><br>        
-        </ul>        
+        </tr>        
     </div> 
 </div>

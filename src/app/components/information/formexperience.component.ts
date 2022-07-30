@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Experiencia } from './experiencia';
 import { ExperienciaService } from './experiencia.service';
+import swal from 'sweetalert2';
 
 @Component({
   selector: 'app-formexperience',
@@ -22,7 +23,13 @@ export class FormexperienceComponent implements OnInit {
       this.experienciaService.edit(this.experiencia).subscribe(
         response => this.router.navigate(['/informacion'])
       )
-  
     }
+    public newexp(): void {
+      this.experienciaService.create(this.experiencia).subscribe(
+        response => {
+          this.router.navigate(['/informacion'])
+          swal.fire('Experiencia creada correctamente', 'success')
+        });
+    }  
 
 }

@@ -52,11 +52,13 @@
 
         <div class="form-group row">
           <div class="col-sm-12">
-            <button class="btn btn-secondary" role="button">Modificar</button>
+            <button class="btn btn-secondary" role="button" (click)="newedu()" *ngIf="!educacion.id else elseBlock">Crear</button>
+
+            <ng-template #elseBlock>
+              <button class="btn btn-secondary" role="button" (click)="updateedu()">Modificar</button>
+            </ng-template>
           </div>
         </div>
-
-
       </form>
     </div>
   </div>

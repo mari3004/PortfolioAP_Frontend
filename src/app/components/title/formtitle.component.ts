@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Persona } from './persona';
 import { PersonaService } from './persona.service';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-TitleForm',
@@ -21,8 +22,10 @@ export class FormtitleComponent implements OnInit {
 
   public updatetitle(): void {
     this.personaService.edit(this.persona).subscribe(
-      response => this.router.navigate(['/inicio'])
-    )
+      persona => {
+        this.router.navigate(['/inicio'])
+        Swal.fire('Nombre actualizado', 'success')
+      })
 
   }
 

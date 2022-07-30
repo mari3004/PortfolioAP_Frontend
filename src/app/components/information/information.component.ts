@@ -4,6 +4,7 @@ import { Educacion } from './educacion';
 import { EducacionService } from './educacion.service';
 import { Experiencia } from './experiencia';
 import { ExperienciaService } from './experiencia.service';
+import swal from 'sweetalert2';
 
 @Component({
   selector: 'app-information',
@@ -31,10 +32,53 @@ export class InformationComponent implements OnInit {
       this.miPorfolio=data;
     });
   }
-    editedu(educacion: Educacion): void{
-    }
-    editexp(experiencia: Experiencia): void{
-    }
+
+  public deleteedu(escuela: Educacion): void {
+    swal.fire({
+      title: `¿Estas seguro de eliminar ${escuela.titulo}?`,
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Si',
+      cancelButtonText: 'No',
+    }).then((result) => {
+      if (result.isConfirmed) {
+        this.educacionService.delete(escuela.id).subscribe(
+          response => {
+            this.escuela = this.escuela.filter(esc => esc !== escuela)
+            swal.fire(
+              'La educacion ha sido eliminada',
+              'success'
+        )}
+        )
+      }
+    })
+  }
+
+  public deleteexp(laboral: Experiencia): void {
+    swal.fire({
+      title: `¿Estas seguro de eliminar ${laboral.empresa}?`,
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Si',
+      cancelButtonText: 'No',
+    }).then((result) => {
+      if (result.isConfirmed) {
+        this.educacionService.delete(laboral.id).subscribe(
+          response => {
+            this.laboral = this.laboral.filter(exp => exp !== laboral)
+            swal.fire(
+              'La experiencia ha sido eliminada',
+              'success'
+        )}
+        )
+      }
+    })
+  }
+
 
 
 }

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Educacion } from './educacion';
 import { EducacionService } from './educacion.service';
+import swal from 'sweetalert2';
 
 @Component({
   selector: 'app-formeducation',
@@ -23,6 +24,12 @@ export class FormeducationComponent implements OnInit {
     this.educacionService.edit(this.educacion).subscribe(
       response => this.router.navigate(['/informacion'])
     )
-
   }
+  public newedu(): void {
+    this.educacionService.create(this.educacion).subscribe(
+      response => {
+        this.router.navigate(['/informacion'])
+        swal.fire('Educacion creada correctamente', 'success')
+      });
+    }
 }

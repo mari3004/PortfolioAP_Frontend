@@ -65,12 +65,13 @@
           </div>
         </div>
 
-        <div class="form-group row">
-          <div class="col-sm-12">
-            <button class="btn btn-secondary" role="button">Modificar</button>
-          </div>
-        </div>
+        <div class="col-sm-12">
+          <button class="btn btn-secondary" role="button" (click)="newexp()" *ngIf="!experiencia.id else elseBlock">Crear</button>
 
+          <ng-template #elseBlock>
+            <button class="btn btn-secondary" role="button" (click)="updateexp()">Modificar</button>
+          </ng-template>
+        </div>
 
       </form>
     </div>
