@@ -11,13 +11,13 @@ import swal from 'sweetalert2';
 
 export class PersonaService {
   persona: any;
-  private urlEndPoint: 'https://guarded-refuge-65976.herokuapp.com/api/persona';
+  private urlEndPoint = 'https://guarded-refuge-65976.herokuapp.com/api/persona';
 
   private httpHeaders = new HttpHeaders({'Content-Type': 'application/json'});
   
   constructor(private http: HttpClient,
     private router: Router) {
-      http.get(this.urlEndPoint+"/traer").subscribe(response=>{
+      http.get(this.urlEndPoint).subscribe(response=>{
         this.persona=response;
      })}
 
