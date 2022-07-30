@@ -16,7 +16,7 @@ h1 {
     padding: 10px;
     font-size: 30px;
 }
-.edit, .new{
+.edit, .new, .delete{
     margin: 0px;
     padding: 5px;
     border: #99A3A4;

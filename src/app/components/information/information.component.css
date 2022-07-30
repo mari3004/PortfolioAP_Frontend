@@ -19,7 +19,7 @@ h2,h3, h4{
     padding: 10px;
     display: inline-block;
 }
-td{
+li{
     padding-left: 6px;
     padding-bottom: 1em;
     
@@ -31,11 +31,11 @@ td{
     padding-right:3px;
     border-radius:30px;
 }
-tr{
+ul{
     padding-bottom: 15px;
 }
 
-.edit, .new{
+.edit, .new, .delete{
     margin: 0px;
     padding: 5px;
     border: #99A3A4;

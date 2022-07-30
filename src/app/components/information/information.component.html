@@ -8,23 +8,24 @@
         </div>
 
         <div>
-            <tr *ngFor="let experiencia of laboral">
+            <ul *ngFor="let experiencia of laboral">
                 <button class="edit" type="button" [routerLink]="['/informacion/editexp']"><i class="bi bi-pencil" width="16" height="16" fill="currentColor"alt=""></i></button>
                 <button class="delete" type="button" (onclick)="deleteexp(experiencia)" ><i class="fa-thin fa-trash-can"></i></button>
                 <h2><img id="logoemp" src="../../../assets/images/planeta laboral.jpg" > {{experiencia.empresa}} - {{experiencia.rol}}</h2>
                 <h4>{{experiencia.fechadeingreso}} a {{experiencia.fechadeegreso}}</h4>
                 
-                    <td>{{experiencia.tarea1}}</td>
-                    <td>{{experiencia.tarea2}}</td>
-                    <td>{{experiencia.tarea3}}</td>
-                    <td>{{experiencia.tarea4}} </td>
-                    <td>{{experiencia.tarea5}} </td>
-                    <td>{{experiencia.tarea6}} </td>
-                    <td>{{experiencia.tarea7}} </td>
-                    <td>{{experiencia.tarea8}} </td>
-                    <td>{{experiencia.tarea9}} </td>
-                
-            </tr>     
+                <ul>
+                    <li>{{experiencia.tarea1}}</li>
+                    <li>{{experiencia.tarea2}}</li>
+                    <li>{{experiencia.tarea3}}</li>
+                    <li>{{experiencia.tarea4}} </li>
+                    <li>{{experiencia.tarea5}} </li>
+                    <li>{{experiencia.tarea6}} </li>
+                    <li>{{experiencia.tarea7}} </li>
+                    <li>{{experiencia.tarea8}} </li>
+                    <li>{{experiencia.tarea9}} </li>
+                </ul>
+            </ul>     
         </div>
     </div>
         
