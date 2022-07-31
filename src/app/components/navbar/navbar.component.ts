@@ -14,7 +14,7 @@ export class NavbarComponent implements OnInit {
 
   miPorfolio:any;
 
-  constructor(public loginservice:LoginService,
+  constructor(public loginService:LoginService,
     private datosPorfolio:PorfolioService,
     private router:Router) { }
 
@@ -31,11 +31,11 @@ export class NavbarComponent implements OnInit {
 
 
   estaAutenticado(){
-    return this.loginservice.estaAutenticado();
+    return this.loginService.estaAutenticado();
   }
 
   salir(){ 
-    return this.loginservice.logout(),
+    return this.loginService.logout(),
     this.router.navigateByUrl('/login');
   }
 }

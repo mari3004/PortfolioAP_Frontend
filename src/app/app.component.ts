@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { LoginService } from './components/navbar/login/login.service';
 
 @Component({
@@ -9,10 +10,16 @@ import { LoginService } from './components/navbar/login/login.service';
 })
 export class AppComponent implements OnInit {
   constructor(
-    private _service:LoginService){}
+    private _service:LoginService,
+    private loginService:LoginService,
+    private router:Router){}
 
 ngOnInit(){
 }
 
+salir(){ 
+  return this.loginService.logout(),
+  this.router.navigateByUrl('/login');
+}
 
 }
