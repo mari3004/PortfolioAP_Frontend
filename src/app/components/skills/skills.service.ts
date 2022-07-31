@@ -78,7 +78,7 @@ export class SkillsService {
   }
 
   delete (id: number) : Observable<Skills>{
-    return this.http.delete<Skills>(`${this.urlEndPoint}/ ${id}`, {headers: this.httpHeaders})
+    return this.http.delete<Skills>(`${this.urlEndPoint}/${id}`, {headers: this.httpHeaders})
     catchError(e => {
 
       if(this.isNoAutorizado(e)){
