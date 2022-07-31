@@ -3,7 +3,7 @@
     <div class="card-header text-center col-sm-12 col-md-12 col-lg-12"><h2>{{titulo}}</h2></div>
     <div class="card-body">
 
-      <form (ngSubmit)="updatetitle()">
+      <form>
         <div class="form-group row">
           <label for="nombre" class="col-form-label col-sm-2">Nombre</label>
           <div class="col-sm-6">
@@ -31,7 +31,7 @@
 
         <div class="form-group row">
           <div class="col-sm-12">
-            <button class="btn btn-secondary" role="button">Modificar</button>
+            <button class="btn btn-secondary" role="button" onclick="updatetitle()">Modificar</button>
           </div>
         </div>
       </form>
