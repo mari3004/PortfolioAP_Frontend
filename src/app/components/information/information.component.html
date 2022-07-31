@@ -7,7 +7,7 @@
         <button class="new" type="button" [routerLink]="['/information/editexp']"><i class="fa-thin fa-plus" width="16" height="16" fill="currentColor"alt=""></i></button>
         </div>
 
-        <div>
+        <ul>
             <div *ngFor="let experiencia of laboral">
                 <button class="edit" type="button" [routerLink]="['/informacion/editexp']"><i class="bi bi-pencil" width="16" height="16" fill="currentColor"alt=""></i></button>
                 <button class="delete" type="button" (onclick)="deleteexp(experiencia)" ><i class="fa-solid fa-xmark"width="16" height="16" fill="currentColor"alt=""></i></button>
@@ -25,7 +25,7 @@
                     <tr>{{experiencia.tarea9}} </tr>
 
             </div>     
-        </div>
+        </ul>
     </div>
         
     <div class="info col-sm-6 col-md-6 col-lg-6">
