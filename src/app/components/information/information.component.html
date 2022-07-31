@@ -10,19 +10,19 @@
         <ul>
             <div *ngFor="let experiencia of laboral">
                 <button class="edit" type="button" [routerLink]="['/informacion/editexp']"><i class="bi bi-pencil" width="16" height="16" fill="currentColor"alt=""></i></button>
-                <button class="delete" type="button" (onclick)="deleteexp(experiencia)" ><i class="fa-solid fa-xmark"width="16" height="16" fill="currentColor"alt=""></i></button>
+                <button class="delete" method="delete" type="button" (onclick)="deleteexp(experiencia)" ><i class="fa-solid fa-xmark"width="16" height="16" fill="currentColor"alt=""></i></button>
                 <h2><img id="logoemp" src="../../../assets/images/planeta laboral.jpg" > {{experiencia.empresa}} - {{experiencia.rol}}</h2>
                 <h4>{{experiencia.fechadeingreso}} a {{experiencia.fechadeegreso}}</h4>
                 
-                    <tr>{{experiencia.tarea1}}</tr>
-                    <tr>{{experiencia.tarea2}}</tr>
-                    <tr>{{experiencia.tarea3}}</tr>
-                    <tr>{{experiencia.tarea4}} </tr>
-                    <tr>{{experiencia.tarea5}} </tr>
-                    <tr>{{experiencia.tarea6}} </tr>
-                    <tr>{{experiencia.tarea7}} </tr>
-                    <tr>{{experiencia.tarea8}} </tr>
-                    <tr>{{experiencia.tarea9}} </tr>
+                    <tr><i class="fa-solid fa-star"></i>{{experiencia.tarea1}}</tr>
+                    <tr><i class="fa-solid fa-star"></i>{{experiencia.tarea2}}</tr>
+                    <tr><i class="fa-solid fa-star"></i>{{experiencia.tarea3}}</tr>
+                    <tr><i class="fa-solid fa-star"></i>{{experiencia.tarea4}} </tr>
+                    <tr><i class="fa-solid fa-star"></i>{{experiencia.tarea5}} </tr>
+                    <tr><i class="fa-solid fa-star"></i>{{experiencia.tarea6}} </tr>
+                    <tr><i class="fa-solid fa-star"></i>{{experiencia.tarea7}} </tr>
+                    <tr><i class="fa-solid fa-star"></i>{{experiencia.tarea8}} </tr>
+                    <tr><i class="fa-solid fa-star"></i>{{experiencia.tarea9}} </tr>
 
             </div>     
         </ul>
@@ -39,7 +39,7 @@
 
         <div *ngFor="let educacion of escuela">
             <button class="edit" type="button" [routerLink]="['/informacion/editedu']"><i class="bi bi-pencil" width="16" height="16" fill="currentColor"alt=""></i></button>
-            <button class="delete" type="button" (onclick)="deleteedu(educacion)" ><i class="fa-solid fa-xmark"width="16" height="16" fill="currentColor"alt=""></i></button>
+            <button class="delete" method="delete" type="button" (onclick)="deleteedu(educacion)" ><i class="fa-solid fa-xmark"width="16" height="16" fill="currentColor"alt=""></i></button>
             <h2><img id="logoemp" src="../../../assets/images/planeta educacion.jpg">{{educacion.titulo}} </h2>
             <h3>{{educacion.establecimiento}}</h3>
             <h4>{{educacion.fechadeingreso}} a {{educacion.fechadeegreso}}</h4><br><br>        

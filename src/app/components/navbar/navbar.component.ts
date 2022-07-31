@@ -34,8 +34,8 @@ export class NavbarComponent implements OnInit {
     return this.loginservice.estaAutenticado();
   }
 
-  salir(){
-    this.loginservice.logout();
+  salir(){ 
+    return this.loginservice.logout(),
     this.router.navigateByUrl('/login');
   }
 }

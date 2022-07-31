@@ -3,7 +3,7 @@
     <div class="card-header text-center col-sm-12 col-md-12 col-lg-12"><h2>{{titulo}}</h2></div>
     <div class="card-body">
 
-      <form (ngSubmit)="updateedu()">
+      <form>
         <div class="form-group row">
           <label for="titulo" class="col-form-label col-sm-2">Titulo</label>
           <div class="col-sm-6">
@@ -52,10 +52,10 @@
 
         <div class="form-group row">
           <div class="col-sm-12">
-            <button class="btn btn-secondary" role="button" (click)="newedu()" *ngIf="!educacion.id else elseBlock">Crear</button>
+            <button class="btn btn-secondary" method="post" role="button" (click)="newedu()" *ngIf="!educacion.id else elseBlock">Crear</button>
 
             <ng-template #elseBlock>
-              <button class="btn btn-secondary" role="button" (click)="updateedu()">Modificar</button>
+              <button class="btn btn-secondary" method="put" role="button" (click)="updateedu()">Modificar</button>
             </ng-template>
           </div>
         </div>
