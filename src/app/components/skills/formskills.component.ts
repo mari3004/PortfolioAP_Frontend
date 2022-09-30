@@ -23,13 +23,13 @@ export class FormskillsComponent implements OnInit {
 
   public updateskill(): void {
     this.skillsService.edit(this.skills).subscribe(
-      response => this.router.navigate(['/skills'])
+      _response => this.router.navigate(['/skills'])
     )
 
   }
   public newskill(): void {
     this.skillsService.create(this.skills).subscribe(
-      response => {
+      _response => {
         this.router.navigate(['/skills'])
         swal.fire('Skill creada correctamente', 'success')
       });

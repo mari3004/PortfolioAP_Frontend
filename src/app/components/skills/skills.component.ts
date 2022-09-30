@@ -41,7 +41,7 @@ export class SkillsComponent implements OnInit {
     }).then((result) => {
       if (result.isConfirmed) {
         this.skillsService.delete(skill.id).subscribe(
-          response => {
+          _response => {
             this.skills = this.skills.filter(ski => ski !== skill)
             swal.fire(
               'La skill ha sido eliminada',

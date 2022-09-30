@@ -79,7 +79,7 @@ export class SkillsService {
 
   delete (id: number) : Observable<Skills>{
     return this.http.delete<Skills>(`${this.urlEndPoint}/${id}`, {headers: this.httpHeaders})
-    catchError(e => {
+    .pipe(catchError(e => {
 
       if(this.isNoAutorizado(e)){
         return throwError(e);
@@ -88,6 +88,6 @@ export class SkillsService {
       swal.fire (e.error.mensaje, e.error.error, 'error');
       return throwError(e);
     })     
-  }
+  )}
     
 }
