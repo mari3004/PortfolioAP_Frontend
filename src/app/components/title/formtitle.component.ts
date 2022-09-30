@@ -22,7 +22,7 @@ export class FormtitleComponent implements OnInit {
 
   public updatetitle(): void {
     this.personaService.edit(this.persona).subscribe(
-      persona => {
+      _persona => {
         this.router.navigate(['/inicio'])
         Swal.fire('Nombre actualizado', 'success')
       })

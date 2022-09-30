@@ -39,7 +39,8 @@ export class LoginComponent implements OnInit {
 
 
     this.loginService.login( this.usuario )
-    .subscribe( resp => {
+    .subscribe({
+      next:resp => {
       console.log(resp);
       Swal.close();
 
@@ -49,14 +50,15 @@ export class LoginComponent implements OnInit {
       this.router.navigateByUrl('/inicio');
     };
 
-    }, (err) => {
+    }, 
+      error: err => {
       console.log(err.error.error.message);
       Swal.fire({
         title: 'Error en el ingreso',
         text: err.error.error.message,
         icon: 'error',})
 
-    }
+    }}
 );
   }
 }

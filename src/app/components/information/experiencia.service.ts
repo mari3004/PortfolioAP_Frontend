@@ -79,7 +79,7 @@ export class ExperienciaService {
 
   delete (id: number) : Observable<Experiencia>{
     return this.http.delete<Experiencia>(`${this.urlEndPoint}/ ${id}`, {headers: this.httpHeaders})
-    catchError(e => {
+    .pipe(catchError(e => {
 
       if(this.isNoAutorizado(e)){
         return throwError(e);
@@ -87,7 +87,7 @@ export class ExperienciaService {
       console.error (e.error.mensaje);
       swal.fire (e.error.mensaje, e.error.error, 'error');
       return throwError(e);
-    })     
+    }))     
   }
     
 }

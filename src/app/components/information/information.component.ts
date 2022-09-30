@@ -45,7 +45,7 @@ export class InformationComponent implements OnInit {
     }).then((result) => {
       if (result.isConfirmed) {
         this.educacionService.delete(escuela.id).subscribe(
-          response => {
+          _response => {
             this.escuela = this.escuela.filter(esc => esc !== escuela)
             swal.fire(
               'La educacion ha sido eliminada',
@@ -68,7 +68,7 @@ export class InformationComponent implements OnInit {
     }).then((result) => {
       if (result.isConfirmed) {
         this.educacionService.delete(laboral.id).subscribe(
-          response => {
+          _response => {
             this.laboral = this.laboral.filter(exp => exp !== laboral)
             swal.fire(
               'La experiencia ha sido eliminada',

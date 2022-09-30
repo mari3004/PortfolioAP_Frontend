@@ -22,12 +22,12 @@ export class FormeducationComponent implements OnInit {
 
   public updateedu(): void {
     this.educacionService.edit(this.educacion).subscribe(
-      response => this.router.navigate(['/informacion'])
+      _response => this.router.navigate(['/informacion'])
     )
   }
   public newedu(): void {
     this.educacionService.create(this.educacion).subscribe(
-      response => {
+      _response => {
         this.router.navigate(['/informacion'])
         swal.fire('Educacion creada correctamente', 'success')
       });

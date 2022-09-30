@@ -78,7 +78,7 @@ export class EducacionService {
 
   delete (id: number) : Observable<Educacion>{
     return this.http.delete<Educacion>(`${this.urlEndPoint}/ ${id}`, {headers: this.httpHeaders})
-    catchError(e => {
+    .pipe(catchError(e => {
 
       if(this.isNoAutorizado(e)){
         return throwError(e);
@@ -86,7 +86,7 @@ export class EducacionService {
       console.error (e.error.mensaje);
       swal.fire (e.error.mensaje, e.error.error, 'error');
       return throwError(e);
-    })     
+    }))     
   }
     
 }

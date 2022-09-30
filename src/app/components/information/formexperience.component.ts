@@ -21,12 +21,12 @@ export class FormexperienceComponent implements OnInit {
   }
   public updateexp(): void {
       this.experienciaService.edit(this.experiencia).subscribe(
-        response => this.router.navigate(['/informacion'])
+        _response => this.router.navigate(['/informacion'])
       )
     }
     public newexp(): void {
       this.experienciaService.create(this.experiencia).subscribe(
-        response => {
+        _response => {
           this.router.navigate(['/informacion'])
           swal.fire('Experiencia creada correctamente', 'success')
         });

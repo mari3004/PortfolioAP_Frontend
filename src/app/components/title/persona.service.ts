@@ -78,7 +78,7 @@ export class PersonaService {
 
   delete (id: number) : Observable<Persona>{
     return this.http.delete<Persona>(`${this.urlEndPoint}/ ${id}`, {headers: this.httpHeaders})
-    catchError(e => {
+    .pipe(catchError(e => {
 
       if(this.isNoAutorizado(e)){
         return throwError(e);
@@ -86,7 +86,7 @@ export class PersonaService {
       console.error (e.error.mensaje);
       swal.fire (e.error.mensaje, e.error.error, 'error');
       return throwError(e);
-    })     
+    }))
   }
   /*subirFoto(archivo: File, id): Observable<HttpEvent<{}>>{
 
