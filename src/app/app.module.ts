@@ -54,7 +54,7 @@ import { RegistroComponent } from './components/navbar/login/registro/registro.c
     RegistroComponent,
     FormeducationeditComponent,
     FormexpeditComponent,
-    FormskilleditComponent
+    FormskilleditComponent,
   ],
 
   imports: [
