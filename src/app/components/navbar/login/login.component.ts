@@ -43,12 +43,11 @@ export class LoginComponent implements OnInit {
       next:resp => {
       console.log(resp);
       Swal.close();
+      this.router.navigate(['/inicio']);
 
       if ( this.recordar ){
         localStorage.setItem('email', this.usuario.email)
-      
-      this.router.navigateByUrl('/inicio');
-      this.router.navigate(['/inicio']);
+        
     };
 
     }, 
