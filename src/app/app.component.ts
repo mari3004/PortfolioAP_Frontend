@@ -19,7 +19,7 @@ ngOnInit(){
 
 salir(){ 
   return this.loginService.logout(),
-  this.router.navigateByUrl('/login');
+  this.router.navigate(['/login']);
 }
 
 }

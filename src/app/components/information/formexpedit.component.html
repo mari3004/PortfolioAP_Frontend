@@ -53,20 +53,22 @@
         <div class="form-group row">
           <label for="tareas" class="col-form-label col-sm-2">Tareas</label>
           <div class="col-sm-6">
-            <input type="text" class="form-control" [(ngModel)]="experiencia.tarea1" name="rol" placeholder="Tarea"/>
-            <input type="text" class="form-control" [(ngModel)]="experiencia.tarea2" name="rol" placeholder="Tarea"/>
-            <input type="text" class="form-control" [(ngModel)]="experiencia.tarea3" name="rol" placeholder="Tarea"/>
-            <input type="text" class="form-control" [(ngModel)]="experiencia.tarea4" name="rol" placeholder="Tarea"/>
-            <input type="text" class="form-control" [(ngModel)]="experiencia.tarea5" name="rol" placeholder="Tarea"/>
-            <input type="text" class="form-control" [(ngModel)]="experiencia.tarea6" name="rol" placeholder="Tarea"/>
-            <input type="text" class="form-control" [(ngModel)]="experiencia.tarea7" name="rol" placeholder="Tarea"/>
-            <input type="text" class="form-control" [(ngModel)]="experiencia.tarea8" name="rol" placeholder="Tarea"/>
-            <input type="text" class="form-control" [(ngModel)]="experiencia.tarea9" name="rol" placeholder="Tarea"/>
+            <input type="text" class="form-control" [(ngModel)]="experiencia.tarea1" name="tarea1" placeholder="Tarea"/>
+            <input type="text" class="form-control" [(ngModel)]="experiencia.tarea2" name="tarea2" placeholder="Tarea"/>
+            <input type="text" class="form-control" [(ngModel)]="experiencia.tarea3" name="tarea3" placeholder="Tarea"/>
+            <input type="text" class="form-control" [(ngModel)]="experiencia.tarea4" name="tarea4" placeholder="Tarea"/>
+            <input type="text" class="form-control" [(ngModel)]="experiencia.tarea5" name="tarea5" placeholder="Tarea"/>
+            <input type="text" class="form-control" [(ngModel)]="experiencia.tarea6" name="tarea6" placeholder="Tarea"/>
+            <input type="text" class="form-control" [(ngModel)]="experiencia.tarea7" name="tarea7" placeholder="Tarea"/>
+            <input type="text" class="form-control" [(ngModel)]="experiencia.tarea8" name="tarea8" placeholder="Tarea"/>
+            <input type="text" class="form-control" [(ngModel)]="experiencia.tarea9" name="tarea9" placeholder="Tarea"/>
           </div>
         </div>
 
-        <div class="col-sm-12">
-          <button class="btn btn-secondary" method="post "role="button" (click)="newexp()">Crear</button>
+        <div class="form-group row">
+          <div class="col-sm-12">
+           <button class="btn btn-secondary" role="button" (click)="updateexp()">Modificar</button>
+          </div>
         </div>
 
       </form>

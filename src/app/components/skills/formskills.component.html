@@ -10,7 +10,7 @@
             <input
               type="text"
               class="form-control"
-              [ngModel]="skills.skill"
+              [(ngModel)]="skills.skill"
               name="skill"
               placeholder="Escribe aqui skill, conocimiento, idioma, etc"
             />
@@ -31,11 +31,7 @@
 
         <div class="form-group row">
           <div class="col-sm-12">
-            <button class="btn btn-secondary" method="post" role="button" onclick="newskill()" *ngIf="!skills.id else elseBlock">Crear</button>
-
-            <ng-template #elseBlock>
-              <button class="btn btn-secondary" method="put" role="button" onclick="updateskill()">Modificar</button>
-            </ng-template>
+            <button class="btn btn-secondary" method="post" role="button" (click)="newskill()">Crear</button>
           </div>
         </div>
       </form>

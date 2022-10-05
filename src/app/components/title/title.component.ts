@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Persona } from './persona';
 import { PersonaService } from './persona.service';
-/*import swal from 'sweetalert2';*/
 
 @Component({
   selector: 'app-title',

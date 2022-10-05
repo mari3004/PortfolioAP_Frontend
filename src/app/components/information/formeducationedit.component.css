@@ -1,0 +1,72 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+*{
+  color: #99A3A4;
+  background-color: transparent;
+  width: 100%;
+}
+.window-notice {
+  background-image: url(../../../assets/images/fondo1.jpg);
+  border: 5px solid #99A3A4;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 0;
+
+}
+.window-notice .content {
+  border-radius: 2px;
+  box-shadow:#2D066B;
+  box-sizing: content-box;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  max-width: 600px;
+  min-width: 320px !important;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  padding: 2rem;
+  font-size: 1.3rem;
+}
+
+.form {
+  position: relative;
+  z-index: 1;
+  background: #2D066B;
+  max-width: 360px;
+  margin: 0 auto 0px;
+  padding: 25px;
+  text-align: center;
+}
+.form input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #99A3A4;
+  color: #5D2B68;
+  font-style: bold;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.form button {
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  outline: 0;
+  background: #99A3A4;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #99A3A4;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+.form button:hover,.form button:active,.form button:focus {
+  background: #5D2B68;
+}

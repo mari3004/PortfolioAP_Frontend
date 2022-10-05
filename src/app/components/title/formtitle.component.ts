@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Persona } from './persona';
 import { PersonaService } from './persona.service';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import Swal from 'sweetalert2';
 
 @Component({
@@ -12,21 +12,36 @@ import Swal from 'sweetalert2';
 export class FormtitleComponent implements OnInit {
 
   public persona: Persona = new Persona();
-  public titulo: string= "Actualizar Datos"
+  public titulo: string= "Actualizar Datos";
+  public id: number | null;
   
   constructor(private personaService: PersonaService,
-    private router: Router) { }
+    private router: Router,
+    private aRouter: ActivatedRoute) { 
+
+    }
 
   ngOnInit() {
+    this.cargarPersona();
   }
+
+  cargarPersona(): void {
+    this.aRouter.params.subscribe(params => {
+      let id = params ['id']
+      if (id){
+        this.personaService.getPersonaid(id).subscribe(
+          _persona => this.persona = _persona)
+      }
+    })
+  }
+
 
   public updatetitle(): void {
-    this.personaService.edit(this.persona).subscribe(
+    this.personaService.edit(this.id, this.persona).subscribe(
       _persona => {
-        this.router.navigate(['/inicio'])
-        Swal.fire('Nombre actualizado', 'success')
+        Swal.fire('Nombre actualizado', '', 'success'),
+              
+        this.router.navigate(['/inicio']);
       })
-
   }
-
 }

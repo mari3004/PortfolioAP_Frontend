@@ -47,21 +47,18 @@ export class EducacionService {
         if (e.status == 400) {
           return throwError(e);
         }
-        console.error (e.error.mensaje);
-        swal.fire (e.error.mensaje, e.error.error, 'error');
-        return throwError(e);
       })
     );
   }
 
-  getEducacionid(id: number): Observable<Educacion> {
+  getEducacionid(id): Observable<Educacion> {
     return this.http.get<Educacion>(`${this.urlEndPoint}/${id}`)
   }
 
-  edit(educacion: Educacion) : Observable<Educacion>{
+  edit(id:number, educacion: Educacion) : Observable<Educacion>{
     return this.http.put<Educacion>(`${this.urlEndPoint}/${educacion.id}`, educacion, {headers: this.httpHeaders})
     .pipe(
-      map((response: any) => response.educacion as Educacion),
+      map((response: any) => response.persona as Educacion),
       catchError(e => {
         if(this.isNoAutorizado(e)){
           return throwError(e);
@@ -69,16 +66,13 @@ export class EducacionService {
         if (e.status == 400) {
           return throwError(e);
         }
-        console.error (e.error.mensaje);
-        swal.fire (e.error.mensaje, e.error.error, 'error');
-        return throwError(e);
       })
     );
   }
 
   delete (id: number) : Observable<Educacion>{
     return this.http.delete<Educacion>(`${this.urlEndPoint}/ ${id}`, {headers: this.httpHeaders})
-    .pipe(catchError(e => {
+    catchError(e => {
 
       if(this.isNoAutorizado(e)){
         return throwError(e);
@@ -86,7 +80,7 @@ export class EducacionService {
       console.error (e.error.mensaje);
       swal.fire (e.error.mensaje, e.error.error, 'error');
       return throwError(e);
-    }))     
+    })     
   }
     
 }

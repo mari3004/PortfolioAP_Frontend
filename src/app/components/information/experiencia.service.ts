@@ -40,7 +40,7 @@ export class ExperienciaService {
   create(experiencia: Experiencia) : Observable<Experiencia>{
     return this.http.post<Experiencia>(this.urlEndPoint, experiencia, {headers: this.httpHeaders})
     .pipe(
-      map((response: any) => response.experiencia as Experiencia),
+      map((response: any) => response.educacion as Experiencia),
       catchError(e => {
         if(this.isNoAutorizado(e)){
           return throwError(e);
@@ -48,21 +48,18 @@ export class ExperienciaService {
         if (e.status == 400) {
           return throwError(e);
         }
-        console.error (e.error.mensaje);
-        swal.fire (e.error.mensaje, e.error.error, 'error');
-        return throwError(e);
       })
     );
   }
 
-  getExperienciaid(id: number): Observable<Experiencia> {
+  getExperienciaid(id): Observable<Experiencia> {
     return this.http.get<Experiencia>(`${this.urlEndPoint}/${id}`)
   }
 
-  edit(experiencia: Experiencia) : Observable<Experiencia>{
+  edit(id:number, experiencia: Experiencia) : Observable<Experiencia>{
     return this.http.put<Experiencia>(`${this.urlEndPoint}/${experiencia.id}`, experiencia, {headers: this.httpHeaders})
     .pipe(
-      map((response: any) => response.experiencia as Experiencia),
+      map((response: any) => response.persona as Experiencia),
       catchError(e => {
         if(this.isNoAutorizado(e)){
           return throwError(e);
@@ -70,9 +67,6 @@ export class ExperienciaService {
         if (e.status == 400) {
           return throwError(e);
         }
-        console.error (e.error.mensaje);
-        swal.fire (e.error.mensaje, e.error.error, 'error');
-        return throwError(e);
       })
     );
   }
@@ -87,7 +81,7 @@ export class ExperienciaService {
       console.error (e.error.mensaje);
       swal.fire (e.error.mensaje, e.error.error, 'error');
       return throwError(e);
-    }))     
-  }
+    })     
+  )}
     
 }

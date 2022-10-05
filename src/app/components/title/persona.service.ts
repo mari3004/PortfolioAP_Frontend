@@ -54,11 +54,12 @@ export class PersonaService {
     );
   }
 
-  getPersonaid(id: number): Observable<Persona> {
+  getPersonaid(id): Observable<Persona> {
     return this.http.get<Persona>(`${this.urlEndPoint}/${id}`)
   }
 
-  edit(persona: Persona) : Observable<Persona>{
+
+  edit(id:number, persona: Persona) : Observable<Persona>{
     return this.http.put<Persona>(`${this.urlEndPoint}/${persona.id}`, persona, {headers: this.httpHeaders})
     .pipe(
       map((response: any) => response.persona as Persona),
@@ -69,9 +70,6 @@ export class PersonaService {
         if (e.status == 400) {
           return throwError(e);
         }
-        console.error (e.error.mensaje);
-        swal.fire (e.error.mensaje, e.error.error, 'error');
-        return throwError(e);
       })
     );
   }
@@ -86,23 +84,8 @@ export class PersonaService {
       console.error (e.error.mensaje);
       swal.fire (e.error.mensaje, e.error.error, 'error');
       return throwError(e);
-    }))
+    })    
+    ) 
   }
-  /*subirFoto(archivo: File, id): Observable<HttpEvent<{}>>{
 
-    let formData = new FormData();
-    formData.append("archivo", archivo);
-    formData.append("id", id)
-
-    const req = new HttpRequest ('POST', `${this.urlEndporint}/upload`, formData, {
-      reportProgress: true
-    });
-    return this.http.request(req).pipe(
-      catchError(e => {
-        this.isNoAutorizado(e);
-        return throwError(e);
-      })
-    )
-  }*/
-    
 }

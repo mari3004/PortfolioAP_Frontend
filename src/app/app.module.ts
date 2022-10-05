@@ -12,6 +12,11 @@ import { FormtitleComponent } from './components/title/formtitle.component';
 import { FormeducationComponent } from './components/information/formeducation.component';
 import { FormexperienceComponent } from './components/information/formexperience.component';
 import { FormskillsComponent } from './components/skills/formskills.component';
+import { FormeducationeditComponent } from './components/information/formeducationedit.component';
+import { FormexpeditComponent } from './components/information/formexpedit.component';
+import { FormskilleditComponent } from './components/skills/formskilledit.component';
+
+
 
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
@@ -47,6 +52,9 @@ import { RegistroComponent } from './components/navbar/login/registro/registro.c
     FormexperienceComponent,
     FormskillsComponent,
     RegistroComponent,
+    FormeducationeditComponent,
+    FormexpeditComponent,
+    FormskilleditComponent
   ],
 
   imports: [

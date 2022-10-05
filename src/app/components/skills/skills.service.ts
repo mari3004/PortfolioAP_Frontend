@@ -48,21 +48,18 @@ export class SkillsService {
         if (e.status == 400) {
           return throwError(e);
         }
-        console.error (e.error.mensaje);
-        swal.fire (e.error.mensaje, e.error.error, 'error');
-        return throwError(e);
       })
     );
   }
 
-  getSkillsid(id: number): Observable<Skills> {
+  getSkillsid(id): Observable<Skills> {
     return this.http.get<Skills>(`${this.urlEndPoint}/${id}`)
   }
 
-  edit(skills: Skills) : Observable<Skills>{
+  edit(id:number, skills: Skills) : Observable<Skills>{
     return this.http.put<Skills>(`${this.urlEndPoint}/${skills.id}`, skills, {headers: this.httpHeaders})
     .pipe(
-      map((response: any) => response.skills as Skills),
+      map((response: any) => response.persona as Skills),
       catchError(e => {
         if(this.isNoAutorizado(e)){
           return throwError(e);
@@ -70,9 +67,6 @@ export class SkillsService {
         if (e.status == 400) {
           return throwError(e);
         }
-        console.error (e.error.mensaje);
-        swal.fire (e.error.mensaje, e.error.error, 'error');
-        return throwError(e);
       })
     );
   }
@@ -89,5 +83,6 @@ export class SkillsService {
       return throwError(e);
     })     
   )}
+  
     
 }

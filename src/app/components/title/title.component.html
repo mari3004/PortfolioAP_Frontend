@@ -8,8 +8,10 @@
 
         <div class="texto text-center col-sm-11 col-md-5 col-lg-5" id="name">
             <h2 class="align-center">Bienvenidos a mi porfolio<br></h2>
-            <button class="edit" type="button" [routerLink]="['/inicio/edittitulo']"><i class="bi bi-pencil" width="16" height="16" fill="currentColor"alt=""></i></button>
-            <h1 *ngFor="let persona of personas">{{persona.nombre}}  {{persona.apellido}}</h1>
+            <h2 *ngFor="let persona of personas">{{persona.nombre}}  {{persona.apellido}}
+            <button type="button" name="editar" [routerLink]="['/inicio/edittitulo', persona.id]" class="edit" ><i class="bi-pencil-square" style="font-size:20px"></i></button>
+            </h2>
+            
         </div>
         
     </div>

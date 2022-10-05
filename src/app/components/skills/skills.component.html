@@ -1,33 +1,31 @@
-<section>
+<div class="row section">
     
     <h1>Skills</h1>
 
     <div class="text-right">
-        <button class="new" type="button" [routerLink]="['/skills/editskill']"><i class="fa-thin fa-plus" width="16" height="16" fill="currentColor"alt=""></i></button>
+        <button class="new" type="button" [routerLink]="['/skills/newskill']"><i class="fa-thin fa-plus" width="16" height="16" fill="currentColor"alt=""></i></button>
     </div>
-
-    <div *ngFor="let skill of skills">
         
-        <div class="text-center col-sm-4 col-md-4 col-lg-4">
-            <button class="edit" type="button" [routerLink]="['/skills/editskill']"><i class="bi bi-pencil" width="16" height="16" fill="currentColor"alt=""></i></button>
-            <button class="delete" method="delete" type="button" (onclick)="deleteskill(skill)" ><i class="fa-solid fa-xmark"width="16" height="16" fill="currentColor"alt=""></i></button>
-            <circle-progress
-                [percent]="skill.porcentaje"
-                [radius]="100"
-                [showUnits]="false"
-                [title]=skill.skill
-                [titleColor]="'#99A3A4'"
-                [titleFontSize]="'30'"
-                [showSubtitle]="false"
-                [subtitleFontSize]="'20'"
-                [subtitleColor]="'#99A3A4'"
-                [outerStrokeWidth]="16"
-                [innerStrokeWidth]="8"
-                [outerStrokeColor]="'#5D2B68'"
-                [innerStrokeColor]="'#6F4F83'"
-                [animation]="true"
-                [animationDuration]="600"
-            ></circle-progress>
-        </div>    
-    </div>
-</section>
+    <div class="col-sm-4 col-md-4 col-lg-4 text-center circle"*ngFor="let skill of skills">
+        <button class="edit" type="button" [routerLink]="['/skills/editskill', skill.id]"><i class="bi bi-pencil" width="16" height="16" fill="currentColor"alt=""></i></button>
+        <button class="delete" method="delete" type="button" (click)="deleteskill(skill)" ><i class="fa-solid fa-xmark"width="16" height="16" fill="currentColor"alt=""></i></button>
+        <circle-progress
+            [percent]="skill.porcentaje"
+            [radius]="100"
+            [showUnits]="false"
+            [title]=skill.skill
+            [titleColor]="'#99A3A4'"
+            [titleFontSize]="'30'"
+            [showSubtitle]="false"
+            [subtitleFontSize]="'20'"
+            [subtitleColor]="'#99A3A4'"
+            [outerStrokeWidth]="16"
+            [innerStrokeWidth]="8"
+            [outerStrokeColor]="'#5D2B68'"
+            [innerStrokeColor]="'#6F4F83'"
+            [animation]="true"
+            [animationDuration]="600"
+        ></circle-progress>
+    </div>    
+
+</div> 
