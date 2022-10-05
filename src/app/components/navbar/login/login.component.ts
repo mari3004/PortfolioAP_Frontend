@@ -47,7 +47,7 @@ export class LoginComponent implements OnInit {
 
       if ( this.recordar ){
         localStorage.setItem('email', this.usuario.email)
-        
+        this.router.navigate(['/inicio']);
     };
 
     }, 
@@ -55,7 +55,7 @@ export class LoginComponent implements OnInit {
       console.log(err.error.error.message);
       Swal.fire({
         title: 'Error en el ingreso',
-        text: err.error.error.message,
+        text: 'Usuario o contraseña incorrectos',
         icon: 'error',})
 
     }}
